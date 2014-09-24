@@ -1,0 +1,65 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+        <title>上海交通大学校园巴士时刻表 by JerryZou</title>
+        <style type="text/css">
+            html{height:100%}
+            body{height:100%;margin:0px;padding:0px}
+            #container{height:100%}
+        </style>
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=kSmEaa2spbYKGxtao1FdpVGq"></script>
+    </head>
+ 
+    <body>
+        <div id="container"></div>
+        <script type="text/javascript">
+            var map = new BMap.Map("container");
+            map.centerAndZoom(new BMap.Point(121.443235,31.031303), 17); //将中心位置设置到上海交大
+            /* //debug: 鼠标点击取经纬度
+            map.addEventListener("click",function(e){
+                console.log(e.point.lng + "," + e.point.lat);
+            });
+            */
+            var stopList = [
+                ['菁菁堂', 121.436534, 31.02475, '07:30　07:45　08:00　08:15　08:25　08:40　09:00　09:20　09:40 10:00　10:20　10:40　11:00　11:20　11:40　12:00　13:00　13:20 13:40　14:00　14:20　14:40　15:00　15:20　15:40　16:00　16:10 16:30　16:35　17:00　17:30　18:15　19:00　20:00'],
+                ['校医院', 121.439911, 31.025764, 'time'],
+                ['东上院', 121.445463, 31.028007, 'time'],
+                ['东中院', 121.444457, 31.030127, 'time'],
+                ['新图书馆', 121.443954, 31.03155, 'time'],
+                ['行政B楼', 121.447601, 31.032742, 'time'],
+                ['电信学院', 121.448751, 31.03155, 'time'],
+                ['凯旋门', 121.452308, 31.029431, 'time'],
+                ['机动学院', 121.454608, 31.032633, 'time'],
+                ['庙门', 121.453566, 31.035001, 'time'],
+                ['船建学院', 121.451589, 31.036842, 'time'],
+                ['文选医学楼', 121.448607, 31.037383, 'time'],
+                ['学生服务中心', 121.43957,  31.034351, 'time'],
+                ['西区学生公寓', 121.435797, 31.033144, 'time'],
+                ['第四餐饮大楼', 121.433264, 31.031349, 'time'],
+                ['华联生活中心', 121.436839, 31.03087, 'time'],
+                ['包玉刚图书馆', 121.437037, 31.028997, 'time'],
+                ['材料学院', 121.434486, 31.027922, 'time']
+            ];
+            for (var i = 0; i < stopList.length; i++) {
+                (function (i) {
+                    var point = new BMap.Point(stopList[i][1], stopList[i][2]);
+                    var marker = new BMap.Marker(point);
+                    var label = new BMap.Label(stopList[i][0],{offset:new BMap.Size(20,-10)});
+                    marker.setLabel(label);
+                    map.addOverlay(marker);
+                    var opts = {
+                        width : 200,   // 信息窗口宽度
+                        height: 100,   // 信息窗口高度
+                        title : stopList[i][0] , // 信息窗口标题
+                    }
+                    var infoWindow = new BMap.InfoWindow(stopList[i][3], opts);  // 创建信息窗口对象 
+                    marker.addEventListener("click", function(){          
+                        map.openInfoWindow(infoWindow,point); //开启信息窗口
+                    });
+                })(i);
+            }
+        </script>  
+    </body>  
+</html>
