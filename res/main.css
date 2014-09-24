@@ -1,0 +1,45 @@
+html {
+	height:100%
+}
+
+body{
+	height:100%;
+	margin:0px;
+	padding:0px;
+	color: #333;
+}
+
+#container{
+	height:100%;
+}
+
+h4.title {
+	margin:0 0 5px 0;
+	padding:0.2em 0;
+}
+
+h5.direct {
+	margin: 15px 0 5px 0;
+}
+
+p {
+	width: 400px;
+	margin:0;
+	line-height:1.5;
+	font-size:13px;
+}
+
+p.attention {
+	color: blue;
+}
+
+p.footer {
+	margin-top: 10px;
+	color: #aaa;
+}
+
+span.blue {
+	color: blue;
+	text-decoration: underline;
+}
+

@@ -36,10 +36,10 @@ window.onload = function () {
             festival_direct2: ''
         },
         '菁菁堂': {
-            direct1: '',
-            direct2: '',
-            festival_direct1: '',
-            festival_direct2: ''
+            direct1: '07:30　07:45　08:00　08:15　08:25　08:40　09:00　09:20　09:40 10:00　10:20　10:40　11:00　11:20　11:40　12:00　13:00　13:20 13:40　14:00　14:20　14:40　15:00　15:20　15:40　16:00　16:10 16:30　<span class="blue">16:35　17:00　17:30　18:15　19:00　20:00</span>',
+            direct2: '08:30　08:50　09:10　09:30　10:00　10:30　11:00　11:30　12:30 13:30　14:00　14:30　15:00　15:30　16:00　<span class="blue">16:35</span>',
+            festival_direct1: '08:30　09:30　10:30　11:30　15:00　<span class="blue">16:30　18:00</span>',
+            festival_direct2: '09:00　10:00　11:00　12:00　14:00　16:00　<span class="blue">17:15</span>'
         },
         '校医院': {
             direct1: '',
@@ -187,8 +187,17 @@ window.onload = function () {
             marker.setLabel(label);
             map.addOverlay(marker);
             var sContent = "<div>"
-                + "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>" + stopList[i][0] + "</h4>"
-                + "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'></p>"
+                + "<h4 class='title'>" + stopList[i][0] + "</h4>"
+                + "<p class='attention'>注意：蓝色标注班次终点站为东川路地铁站</p>"
+                + "<h5 class='direct'>逆时针</h5>"
+                + "<p class='timetable'>" + stopTime[stopList[i][0]].direct1 + "</p>"
+                + "<h5 class='direct'>顺时针</h5>"
+                + "<p class='timetable'>" + stopTime[stopList[i][0]].direct2 + "</p>"
+                + "<h5 class='direct'>寒暑假－逆时针</h5>"
+                + "<p class='timetable'>" + stopTime[stopList[i][0]].festival_direct1 + "</p>"
+                + "<h5 class='direct'>寒暑假－顺时针</h5>"
+                + "<p class='timetable'>" + stopTime[stopList[i][0]].festival_direct2 + "</p>"
+                + "<p class='footer'>本时刻表的最后更新时间为：2014年9月24日</p>"
                 + "</div>";
             var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象 
             marker.addEventListener("click", function(){          
