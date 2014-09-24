@@ -16,7 +16,8 @@ SJTU校园巴士时刻表
 - 支持小屏手机的访问
 
 #反馈与建议
-所有的反馈建议请在[issue版](https://github.com/zry656565/SJTU-Bus/issues)提交，或者直接在我[博客](http://jerryzou.com)留言
+- 所有的反馈建议请在[issue版](https://github.com/zry656565/SJTU-Bus/issues)提交
+- 或者直接在我[博客](http://jerryzou.com)留言
 
 #参考资料
 - [关于调整校园巴士运行线路及运行时刻的通知](http://www.sjtu.edu.cn/info/1736/61107.htm)
