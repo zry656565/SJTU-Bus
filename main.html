@@ -19,13 +19,13 @@
             map.centerAndZoom(new BMap.Point(121.443235,31.031303), 17); //将中心位置设置到上海交大
             
             //debug: 鼠标点击取经纬度
-            /*map.addEventListener("click",function(e){
+            map.addEventListener("click",function(e){
                 console.log(e.point.lng + "," + e.point.lat);
-            });*/
+            });
             
             var stopList = [
                 ['东川路地铁站', 121.426814, 31.023853, 'time'],
-                ['菁菁堂', 121.436534, 31.02475, '07:30　07:45　08:00　08:15　08:25　08:40　09:00　09:20　09:40 10:00　10:20　10:40　11:00　11:20　11:40　12:00　13:00　13:20 13:40　14:00　14:20　14:40　15:00　15:20　15:40　16:00　16:10 16:30　16:35　17:00　17:30　18:15　19:00　20:00'],
+                ['菁菁堂', 121.436534, 31.02475, 'time'],
                 ['校医院', 121.439911, 31.025764, 'time'],
                 ['东上院', 121.445463, 31.028007, 'time'],
                 ['东中院', 121.444457, 31.030127, 'time'],
@@ -44,6 +44,15 @@
                 ['包玉刚图书馆', 121.437037, 31.028997, 'time'],
                 ['材料学院', 121.434486, 31.027922, 'time']
             ];
+            var lineList = [
+                [
+                    [121.436534, 31.02475],
+                    [121.439911, 31.025764]
+                ],
+                [
+
+                ]
+            ];
             for (var i = 0; i < stopList.length; i++) {
                 (function (i) {
                     var point = new BMap.Point(stopList[i][1], stopList[i][2]);
@@ -61,6 +70,15 @@
                         map.openInfoWindow(infoWindow,point); //开启信息窗口
                     });
                 })(i);
+            }
+            //绘制路线
+            for (var i = 0; i < lineList.length; i++) {
+                var pointArr = [];
+                for (var j = 0; j < lineList[i].length; j++) {
+                    pointArr.push(new BMap.Point(lineList[i][j][0], lineList[i][j][1]));
+                }
+                var polyline = new BMap.Polyline(pointArr, {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+                map.addOverlay(polyline);
             }
         </script>  
     </body>  
