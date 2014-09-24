@@ -27,6 +27,7 @@ p {
 	margin:0;
 	line-height:1.5;
 	font-size:13px;
+	word-spacing: 5px;
 }
 
 p.attention {
@@ -42,3 +43,6 @@ span.blue {
 	color: blue;
 }
 
+span.red {
+	color: #a00;
+}

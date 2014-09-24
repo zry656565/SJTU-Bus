@@ -30,10 +30,9 @@ window.onload = function () {
     ];
     var stopTime = {
         '东川路地铁站': {
-            direct1: '',
-            direct2: '',
-            festival_direct1: '',
-            festival_direct2: ''
+            direct1: '07:24 07:39 07:54 08:09 <span class="red">17:03 17:28 17:58 18:43 19:28 20:28</span>',
+            festival_direct1: '8:24 <span class="red">16:58 17:43 18:28</span>',
+            metro_station: true
         },
         '菁菁堂': {
             direct1: '07:30　07:45　08:00　08:15　08:25　08:40　09:00　09:20　09:40 10:00　10:20　10:40　11:00　11:20　11:40　12:00　13:00　13:20 13:40　14:00　14:20　14:40　15:00　15:20　15:40　16:00　16:10 16:30　<span class="blue">16:35　17:00　17:30　18:15　19:00　20:00</span>',
@@ -189,14 +188,15 @@ window.onload = function () {
             var sContent = "<div>"
                 + "<h4 class='title'>" + stopList[i][0] + "</h4>"
                 + "<p class='attention'>1.蓝色标注班次终点站为东川路地铁站 2.周六日及国定节假日停运</p>"
-                + "<h5 class='direct'>逆时针</h5>"
-                + "<p class='timetable'>" + stopTime[stopList[i][0]].direct1 + "</p>"
-                + "<h5 class='direct'>顺时针</h5>"
-                + "<p class='timetable'>" + stopTime[stopList[i][0]].direct2 + "</p>"
-                + "<h5 class='direct'>寒暑假－逆时针</h5>"
-                + "<p class='timetable'>" + stopTime[stopList[i][0]].festival_direct1 + "</p>"
-                + "<h5 class='direct'>寒暑假－顺时针</h5>"
-                + "<p class='timetable'>" + stopTime[stopList[i][0]].festival_direct2 + "</p>"
+                + (stopTime[stopList[i][0]].metro_station ? "<p class='attention'>3.红色标注班次终点站［可能］为菁菁堂（根据本站作者的猜测＝。＝）</p>" : '')
+                + (stopTime[stopList[i][0]].direct1 ? "<h5 class='direct'>逆时针</h5>"
+                + "<p class='timetable'>" + stopTime[stopList[i][0]].direct1 + "</p>" : '')
+                + (stopTime[stopList[i][0]].direct2 ? "<h5 class='direct'>顺时针</h5>"
+                + "<p class='timetable'>" + stopTime[stopList[i][0]].direct2 + "</p>" : '')
+                + (stopTime[stopList[i][0]].festival_direct1 ? "<h5 class='direct'>寒暑假－逆时针</h5>"
+                + "<p class='timetable'>" + stopTime[stopList[i][0]].festival_direct1 + "</p>" : '')
+                + (stopTime[stopList[i][0]].festival_direct2 ? "<h5 class='direct'>寒暑假－顺时针</h5>"
+                + "<p class='timetable'>" + stopTime[stopList[i][0]].festival_direct2 + "</p>" : '')
                 + "<p class='footer'>本时刻表的最后更新时间为：2014年9月24日</p>"
                 + "</div>";
             var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象 
