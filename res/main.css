@@ -23,14 +23,14 @@ h5.direct {
 }
 
 p {
-	width: 400px;
+	width: 420px;
 	margin:0;
 	line-height:1.5;
 	font-size:13px;
 }
 
 p.attention {
-	color: blue;
+	color: #666;
 }
 
 p.footer {
@@ -40,6 +40,5 @@ p.footer {
 
 span.blue {
 	color: blue;
-	text-decoration: underline;
 }
 

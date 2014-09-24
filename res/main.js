@@ -188,7 +188,7 @@ window.onload = function () {
             map.addOverlay(marker);
             var sContent = "<div>"
                 + "<h4 class='title'>" + stopList[i][0] + "</h4>"
-                + "<p class='attention'>注意：蓝色标注班次终点站为东川路地铁站</p>"
+                + "<p class='attention'>1.蓝色标注班次终点站为东川路地铁站 2.周六日及国定节假日停运</p>"
                 + "<h5 class='direct'>逆时针</h5>"
                 + "<p class='timetable'>" + stopTime[stopList[i][0]].direct1 + "</p>"
                 + "<h5 class='direct'>顺时针</h5>"
