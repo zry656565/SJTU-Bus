@@ -13,4 +13,7 @@ SJTU校园巴士时刻表
 #还有哪些工作？
 
 - 东川路站的经纬度需要修正
-- 每个站点的时刻表
+- 支持小屏手机的访问
+
+#反馈与建议
+所有的反馈建议请在[issue版](https://github.com/zry656565/SJTU-Bus/issues)提交，或者直接在我[博客](http://jerryzou.com)留言
