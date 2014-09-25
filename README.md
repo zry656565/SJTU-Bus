@@ -3,6 +3,8 @@ SJTU校园巴士时刻表
 
 本项目是一个web应用，用于便捷地查看上海交通大学校园巴士的时刻表。
 
+![SJTU-Bus][1]
+
 #主要贡献者
 
 - [zry656565](https://github.com/zry656565)
@@ -24,3 +26,4 @@ SJTU校园巴士时刻表
 #参考资料
 - [关于调整校园巴士运行线路及运行时刻的通知](http://www.sjtu.edu.cn/info/1736/61107.htm)
 
+[1]: res/sjtubus.png 
