@@ -39,10 +39,18 @@ p.footer {
 	color: #aaa;
 }
 
+p.timetable {
+	color: green;
+}
+
 span.blue {
 	color: blue;
 }
 
 span.red {
 	color: #a00;
+}
+
+span.silver {
+	color: LightGray;
 }
