@@ -17,7 +17,7 @@
     function initContent(stopTime, stopName) {
         return "<div>" +
            "<h4 class='title'>" + stopName + "</h4>" +
-           "<p class='attention'>1.灰色标注班次为过时班次，绿色标注班次为可乘坐班次</p>" +
+           "<p class='attention'>1.灰色标注班次为当天停运班次，绿色标注班次为当天可乘坐班次</p>" +
            "<p class='attention'>2.蓝色标注班次终点站为东川路地铁站 3.周六日及国定节假日停运</p>" +
            (stopTime[stopName].metro_station ? "<p class='attention'>4.红色标注班次终点站［可能］为菁菁堂（根据本站作者的猜测＝。＝）</p>" : '');
     }
