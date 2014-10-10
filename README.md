@@ -16,13 +16,12 @@ SJTU校园巴士时刻表
 #还有哪些工作？
 
 - 东川路站的经纬度需要修正
-- 节假日的班次需要显示为灰色
 - 支持小屏手机的访问
 
 #反馈与建议
 - 本应用是由几位交大的同学利用课余时间制作，有什么问题可以及时反馈给我们。
 - 所有的反馈建议请在[issue版](https://github.com/zry656565/SJTU-Bus/issues)提交
-- 或者直接在我[博客](http://jerryzou.com)留言
+- 或者直接在我[博客相关帖子](http://jerryzou.com/posts/sjtuBusFeedback/)里留言
 
 #参考资料
 - [关于调整校园巴士运行线路及运行时刻的通知](http://www.sjtu.edu.cn/info/1736/61107.htm)
