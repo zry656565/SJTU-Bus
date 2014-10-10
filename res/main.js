@@ -55,13 +55,13 @@
         var blueNum = stopTime[stopName][directId + '_blue'];
         var redNum = stopTime[stopName][directId + '_red'];
         // if it's Sunday or Saturday
-        if (day == 0 || day == 6) {
+        /*if (day == 0 || day == 6) {
             for(; j<timeArr.length; j += 2) {
                 sContent += printTime(timeArr[j], timeArr[j + 1]);
             }
             sContent += "</span>" + "</p>";
             return sContent;
-        }
+        }*/
 
         for(; j<timeArr.length; j += 2) {
             if(timeArr[j] < hour || (timeArr[j] == hour && timeArr[j + 1] <= minute)) {
