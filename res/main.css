@@ -54,3 +54,17 @@ span.red {
 span.silver {
 	color: LightGray;
 }
+
+#feedback {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 10px;
+	background: #333;
+	color: white;
+	opacity: 0.75;
+}
+
+#feedback:hover {
+	opacity: 1.0;
+}
