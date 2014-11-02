@@ -1,0 +1,89 @@
+html {
+	height:100%
+}
+
+body{
+	height:100%;
+	margin:0px;
+	padding:0px;
+	color: #333;
+}
+
+#container{
+	height:100%;
+}
+
+/*===========================================*/
+/*  stop message  */
+/*===========================================*/
+.tip-content {
+	max-width: 450px;
+	overflow: scroll;
+}
+
+.tip-content h4.title {
+	margin:0 0 5px 0;
+	padding:0.2em 0;
+}
+
+.tip-content h5.direct {
+	margin: 15px 0 5px 0;
+}
+
+.tip-content p {
+	width: 420px;
+	margin:0;
+	line-height:1.5;
+	font-size:13px;
+	word-spacing: 5px;
+}
+
+.tip-content.mobile p {
+	width: 100%;
+	margin:0;
+	line-height:1.5;
+	font-size:13px;
+	word-spacing: 5px;
+}
+
+.tip-content p.attention {
+	color: #666;
+}
+
+.tip-content p.footer {
+	margin-top: 10px;
+	color: #aaa;
+}
+
+.tip-content p.timetable {
+	color: green;
+}
+
+.tip-content span.blue {
+	color: blue;
+}
+
+.tip-content span.red {
+	color: #a00;
+}
+
+.tip-content span.silver {
+	color: LightGray;
+}
+
+/*===========================================*/
+/* feedback */
+/*===========================================*/
+#feedback {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 10px;
+	background: #333;
+	color: white;
+	opacity: 0.75;
+}
+
+#feedback:hover {
+	opacity: 1.0;
+}

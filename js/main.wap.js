@@ -1,4 +1,6 @@
 (function($) {
+    var mobile = false;
+
     function printTime(h,m) {
         var result = "";
         if(h < 10) {
@@ -15,7 +17,7 @@
     }
 
     function initContent(stopTime, stopName) {
-        return "<div>" +
+        return "<div class='tip-content" + (mobile ? " mobile" : "")+ "'>" +
            "<h4 class='title'>" + stopName + "</h4>" +
            "<p class='attention'>1.灰色标注班次为当天停运班次，绿色标注班次为当天可乘坐班次</p>" +
            "<p class='attention'>2.蓝色标注班次终点站为东川路地铁站 3.周六日及国定节假日停运</p>" +
@@ -98,14 +100,16 @@
         return sContent;
     }
 
+
     $(function () {
         //if user use a mobile device, hide the 'fork me' image!
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             $('#forkme').hide();
+            mobile = true;
         }
     
         var map = new BMap.Map("container");
-        map.centerAndZoom(new BMap.Point(121.443235,31.031303), 17); //将中心位置设置到上海交大
+        map.centerAndZoom(new BMap.Point(121.443235,31.031303), 16); //将中心位置设置到上海交大
         
         //debug: 鼠标点击取经纬度
         map.addEventListener("click",function(e){
@@ -155,10 +159,6 @@
             }
             var polyline = new BMap.Polyline(pointArr, {strokeColor:"blue", strokeWeight:5, strokeOpacity:0.5});
             map.addOverlay(polyline);
-        }).fail(function(){
-            for (var i = 0; i < arguments.length; i++) {
-                console.log(arguments[i]);
-            }
         });
     });
-})(jQuery);
+})(Zepto);

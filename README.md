@@ -26,4 +26,4 @@ SJTU校园巴士时刻表
 #参考资料
 - [关于调整校园巴士运行线路及运行时刻的通知](http://www.sjtu.edu.cn/info/1736/61107.htm)
 
-[1]: res/sjtubus.png 
+[1]: images/sjtubus.png 
