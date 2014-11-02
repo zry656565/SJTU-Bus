@@ -22,7 +22,7 @@ body{
 	min-height: 100px;
 	max-height: 200px;
 	height: 80%;
-	overflow: scroll;
+	overflow-y: scroll;
 }
 
 .top-content {
