@@ -16,29 +16,29 @@ body{
 /*===========================================*/
 /*  stop message  */
 /*===========================================*/
-.tip-content {
+.tip-scroll {
+	margin: 5px 0 0;
 	max-width: 450px;
+	min-height: 100px;
+	max-height: 200px;
+	height: 80%;
 	overflow: scroll;
 }
 
-.tip-content h4.title {
+.top-content {
+	width: 100%;
+}
+
+h4.title {
 	margin:0 0 5px 0;
 	padding:0.2em 0;
 }
 
 .tip-content h5.direct {
-	margin: 15px 0 5px 0;
+	margin: 8px 0 5px 0;
 }
 
-.tip-content p {
-	width: 420px;
-	margin:0;
-	line-height:1.5;
-	font-size:13px;
-	word-spacing: 5px;
-}
-
-.tip-content.mobile p {
+p {
 	width: 100%;
 	margin:0;
 	line-height:1.5;
@@ -46,11 +46,11 @@ body{
 	word-spacing: 5px;
 }
 
-.tip-content p.attention {
+p.attention {
 	color: #666;
 }
 
-.tip-content p.footer {
+p.footer {
 	margin-top: 10px;
 	color: #aaa;
 }
@@ -63,7 +63,7 @@ body{
 	color: blue;
 }
 
-.tip-content span.red {
+span.red {
 	color: #a00;
 }
 
@@ -75,13 +75,14 @@ body{
 /* feedback */
 /*===========================================*/
 #feedback {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	padding: 10px;
 	background: #333;
+	bottom: 0;
 	color: white;
+	padding: 4px 0;
+	position: absolute;
 	opacity: 0.75;
+	text-align: center;
+	width: 100%;
 }
 
 #feedback:hover {
