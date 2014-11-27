@@ -15,15 +15,15 @@ if( $detect->isMobile() && !$detect->isTablet() ){
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
         <title>上海交通大学校园巴士时刻表 by JerryZou</title>
-        <link href="css/main.<?=$version?>.css" rel="stylesheet"/>
+        <link href="css/main.<?=$version?>.css?v=1.0.1" rel="stylesheet"/>
         <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=kSmEaa2spbYKGxtao1FdpVGq"></script>
         <?php if ($version === "web") { ?>
         <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
         <?php } else { ?>
         <script type="text/javascript" src="js/zepto.min.js"></script>
         <?php } ?>
-        <script type="text/javascript" src="js/utility.js"></script>
-        <script type="text/javascript" src="js/main.<?=$version?>.js"></script>
+        <script type="text/javascript" src="js/utility.js?v=1.0.1"></script>
+        <script type="text/javascript" src="js/main.<?=$version?>.js?v=1.0.1"></script>
         <!-- baidu site center -->
         <script>
             var _hmt = _hmt || [];
