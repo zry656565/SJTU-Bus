@@ -8,14 +8,12 @@
             console.log(e.point.lng + "," + e.point.lat);
         });*/
         
-        $.getJSON( "data.json", function( data ) {
-            var stopList = data.stopList;
-            var stopTime = data.stopTime;
-            var lineList = data.lineList;
-            var date = new Date();
-            var day = date.getDay();
-            var hour = date.getHours();
-            var minute = date.getMinutes();
+        $.getJSON( "data.json?v=1.0.1", function( data ) {
+            var timeList = data.startTime,
+                dongchuanTime = data.dongchuanTime,
+                stopList = data.stopList,
+                stopTime = data.stopTime;
+
             for (var i = 0; i < stopList.length; i++) {
                 (function (i) {
                     var point = new BMap.Point(stopList[i][1], stopList[i][2]);
@@ -24,38 +22,35 @@
                     marker.setLabel(label);
                     map.addOverlay(marker);
                     var stopName = stopList[i][0];
-                    var sContent = SBus.initContent(stopTime, stopName);
-                    if(stopTime[stopName].direct1) {
-                        sContent += SBus.pushDirectToContent('direct1', stopTime, stopName);
-                    } 
-                    if(stopTime[stopName].direct2) {
-                        sContent += SBus.pushDirectToContent('direct2', stopTime, stopName);
+                    var sContent = SBus.initContent(stopName, i===0);
+                    if (i===0) {
+                        ['direct1', 'festival_direct1'].forEach(function(direct){
+                            sContent += SBus.pushDirectToContent(direct, dongchuanTime, stopName);
+                        });
+                    } else {
+                        SBus.nextStop(timeList, stopTime[stopName]);
+                        ['direct1', 'direct2', 'festival_direct1',
+                            'festival_direct2'].forEach(function(direct){
+                            sContent += SBus.pushDirectToContent(direct, timeList, stopName);
+                        });
                     }
-                    if(stopTime[stopName].festival_direct1) {
-                        sContent += SBus.pushDirectToContent('festival_direct1', stopTime, stopName);
-                    }
-                    if(stopTime[stopName].festival_direct2) {
-                        sContent += SBus.pushDirectToContent('festival_direct2', stopTime, stopName);
-                    }
-                    sContent += "<p class='footer'>本时刻表的最后更新时间为：2014年9月24日</p>"  + "</div>";
+                    sContent += "<p class='footer'>本时刻表的最后更新时间为：2014年11月27日</p>"  + "</div>";
                     var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象 
                     marker.addEventListener("click", function(){          
-                        map.openInfoWindow(infoWindow,point); //开启信息窗口
+                        map.openInfoWindow(infoWindow, point); //开启信息窗口
                     });
                 })(i);
             }
+
             //绘制路线
-            var pointArr = [];
+            var lineList = data.lineList,
+                pointArr = [];
             for (var i = 0; i < lineList.length; i++) {
                 pointArr.push(new BMap.Point(lineList[i][0], lineList[i][1]));
             }
             var polyline = new BMap.Polyline(pointArr, {strokeColor:"blue", strokeWeight:5, strokeOpacity:0.5});
             map.addOverlay(polyline);
-        }).fail(function(){
-            /*for (var i = 0; i < arguments.length; i++) {
-                console.log(arguments[i]);
-            }*/
-        });
+        }).fail(function(){});
     });
 })(jQuery);
 

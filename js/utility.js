@@ -17,22 +17,48 @@ var SBus = {};
         return result;
     }
 
-    SBus.initContent = function(stopTime, stopName) {
+    SBus.initContent = function(stopName, special) {
         return "<div class='tip-content'>" +
            "<h4 class='title'>" + stopName + "</h4>" +
            "<p class='attention'>1. 灰色班次：当天已停运</p>" +
            "<p class='attention'>2. 绿色班次：当天可乘坐</p>" +
            "<p class='attention'>3. 蓝色班次：终点站东川路地铁站</p>" +
            "<p class='attention'>*. 周六日及法定节假日停运</p>" +
-           (stopTime[stopName].metro_station ? "<p class='attention'>4.红色标注班次终点站［可能］为菁菁堂（根据本站作者的猜测＝。＝）</p>" : '');
+           (special ? "<p class='attention'>4.红色标注班次终点站［可能］为菁菁堂（根据本站作者的猜测＝。＝）</p>" : '');
     }
 
-    SBus.initContentMobile = function(stopTime, stopName) {
+    SBus.initContentMobile = function(stopName) {
         return "<h4 class='title'>" + stopName + "</h4>" +
            "<p class='attention'>1.蓝色班次：终点站东川路地铁站</p>" +
            "<p class='attention'>2.周六日及法定节假日停运</p>" +
            "<p class='attention'>3.请<span class='red'>滚动查看</span>以下时间</p>" + 
            "<div class='tip-scroll'>" + "<div class='tip-content'>";
+    }
+
+    SBus.calcTime = function(timeArr, diff) {
+        for (var i = 0; i < timeArr.length; i+=2) {
+            var hour = timeArr[i],
+                minute = timeArr[i+1];
+            minute += diff;
+            if (minute >= 60) {
+                minute -= 60;
+                hour++;
+            } else if (minute < 0) {
+                minute += 60;
+                hour--;
+            }
+            timeArr[i] = hour;
+            timeArr[i+1] = minute;
+        }
+    }
+
+    SBus.nextStop = function(timeList, diff) {
+        console.log(timeList);
+        console.log(diff);
+        SBus.calcTime(timeList['direct1'], diff.direct1_diff);
+        SBus.calcTime(timeList['festival_direct1'], diff.direct1_diff);
+        SBus.calcTime(timeList['direct2'], diff.direct2_diff);
+        SBus.calcTime(timeList['festival_direct2'], diff.direct2_diff);
     }
 
     SBus.pushDirectToContent = function(directId, stopTime, stopName) {
@@ -64,9 +90,9 @@ var SBus = {};
         }
         sContent += "<h5 class='direct'>" + directName + "</h5>" + "<p class='timetable'>"  + "<span class='silver'>";
         var j = 0;
-        var timeArr = stopTime[stopName][directId];
-        var blueNum = stopTime[stopName][directId + '_blue'];
-        var redNum = stopTime[stopName][directId + '_red'];
+        var timeArr = stopTime[directId];
+        var blueNum = stopTime[directId + '_blue'];
+        var redNum = stopTime[directId + '_red'];
         // if it's Sunday or Saturday
         /*if (day == 0 || day == 6) {
             for(; j<timeArr.length; j += 2) {
