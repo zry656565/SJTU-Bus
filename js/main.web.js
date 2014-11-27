@@ -1,5 +1,13 @@
 (function($) {
     $(function () {
+        //handle notice
+        if ($.cookie('SJTUBus-Notice')) {
+            $('.shadow').hide();
+            $('.notice').hide();
+        } else {
+            $.cookie('SJTUBus-Notice', 'true', { expires: 365 });
+        }
+
         var map = new BMap.Map("container");
         map.centerAndZoom(new BMap.Point(121.443235,31.031303), 17); //将中心位置设置到上海交大
         

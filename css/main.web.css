@@ -107,7 +107,7 @@ body{
 	bottom: 100px;
 	margin: auto;
 	width: 300px;
-	height: 220px;
+	height: 260px;
 	background: #fff;
 	z-index: 200;
 }
@@ -118,8 +118,9 @@ body{
 
 .notice p {
 	text-indent: 30px;
-	text-align: left;
-	margin: 4px 10px;
+	text-align: justify;
+	margin: 5px 15px;
+	line-height: 1.2;
 }
 
 .notice .right {

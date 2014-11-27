@@ -5,6 +5,8 @@
  * Copyright 2006, 2014 Klaus Hartl
  * Released under the MIT license
  */
+var jQuery = jQuery || undefined;
+
 (function (factory) {
 	if (typeof define === 'function' && define.amd) {
 		// AMD
@@ -14,7 +16,7 @@
 		factory(require('jquery'));
 	} else {
 		// Browser globals
-		factory(jQuery);
+		factory(jQuery || Zepto);
 	}
 }(function ($) {
 

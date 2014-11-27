@@ -106,10 +106,10 @@ span.red {
 	top: 0;
 	right: 0;
 	left: 0;
-	bottom: 100px;
+	bottom: 50px;
 	margin: auto;
 	width: 250px;
-	height: 250px;
+	height: 240px;
 	background: #fff;
 	z-index: 200;
 }
@@ -119,10 +119,11 @@ span.red {
 }
 
 .notice p {
+	width: 220px;
 	text-indent: 30px;
-	text-align: left;
-	margin: 4px 10px;
-	width: 230px;
+	text-align: justify;
+	margin: 5px 15px;
+	line-height: 1.2;
 }
 
 .notice .right {
