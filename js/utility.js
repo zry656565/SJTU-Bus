@@ -53,8 +53,6 @@ var SBus = {};
     }
 
     SBus.nextStop = function(timeList, diff) {
-        console.log(timeList);
-        console.log(diff);
         SBus.calcTime(timeList['direct1'], diff.direct1_diff);
         SBus.calcTime(timeList['festival_direct1'], diff.direct1_diff);
         SBus.calcTime(timeList['direct2'], diff.direct2_diff);
