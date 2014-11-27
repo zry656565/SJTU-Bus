@@ -86,3 +86,54 @@ body{
 #feedback:hover {
 	opacity: 1.0;
 }
+
+/*===========================================*/
+/* notice */
+/*===========================================*/
+.shadow {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	opacity: 0.8;
+	background: #000;
+}
+
+.notice {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 100px;
+	margin: auto;
+	width: 300px;
+	height: 220px;
+	background: #fff;
+	z-index: 200;
+}
+
+.notice h3 {
+	text-align: center;
+}
+
+.notice p {
+	text-indent: 30px;
+	text-align: left;
+	margin: 4px 10px;
+}
+
+.notice .right {
+	text-align: right;
+}
+
+.notice button {
+	display: block;
+	padding: 4px 10px;
+	background: #777;
+	color: #fff;
+	margin: 15px auto 5px;
+}
+
+.notice button:active {
+	background: #333;
+}

@@ -4,7 +4,7 @@
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
         <title>上海交通大学校园巴士时刻表 by JerryZou</title>
-        <link href="css/main.web.css" rel="stylesheet"/>
+        <link href="css/main.web.css?v=1.0.1" rel="stylesheet"/>
         <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=kSmEaa2spbYKGxtao1FdpVGq"></script>
         <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="js/utility.js"></script>
@@ -23,6 +23,21 @@
     </head>
  
     <body>
+        <div class="shadow"></div>
+        <div class="notice">
+            <h3>公告</h3>
+            <p>由于近期班车时间出现变动，现在的校园巴士时刻表部分时间不太准确，目前我正在紧急修复这个问题。敬请注意！</p>
+            <p class="right">@jerry蛋蛋哥</p>
+            <p class="right">2014年11月27日</p>
+            <button>我知道了</button>
+        </div>
+        <script>
+            $('.notice button').click(function(){
+                $('.shadow').hide();
+                $('.notice').hide();
+            })
+        </script>>
+
         <div id="container"></div>
 
         <!-- fork me on github -->
