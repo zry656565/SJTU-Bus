@@ -2,11 +2,7 @@
 // Include and instantiate the class.
 require_once 'include/Mobile_Detect.php';
 $detect = new Mobile_Detect;
-$version = "web";
-
-if( $detect->isMobile() && !$detect->isTablet() ){
-    $version = "wap";
-}
+$version = ($detect->isMobile() && !$detect->isTablet()) ? "wap" : "web";
 ?>
 
 <!DOCTYPE html>
