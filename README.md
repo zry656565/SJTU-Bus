@@ -18,11 +18,6 @@ SJTU校园巴士时刻表
 - [MyComputableRomance](https://github.com/MyComputableRomance)
 - [ysyjerry1992](https://github.com/ysyjerry1992)
 
-#还有哪些工作？
-
-- 英语版？
-- 来个安卓版&iOS版？
-
 #反馈与建议
 - 本应用是由几位交大的同学利用课余时间制作，有什么问题可以及时反馈给我们。
 - 所有的反馈建议请在[issue版](https://github.com/zry656565/SJTU-Bus/issues)提交
