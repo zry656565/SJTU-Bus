@@ -3,6 +3,15 @@
 require_once 'include/Mobile_Detect.php';
 $detect = new Mobile_Detect;
 $version = ($detect->isMobile() && !$detect->isTablet()) ? "wap" : "web";
+
+$webScript = '';
+$wapScript = '';
+$string = file_get_contents("map.json"); // map.json is produced by FIS
+$arr = json_decode($string, true);
+foreach ($arr['pkg'] as $id => $obj) {
+    if (substr($obj['uri'], 0, 7) === '/js/web') $webScript = $obj['uri'];
+    if (substr($obj['uri'], 0, 7) === '/js/wap') $wapScript = $obj['uri'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +25,7 @@ $version = ($detect->isMobile() && !$detect->isTablet()) ? "wap" : "web";
     </head>
  
     <body>
+
         <div id="container"></div>
 
         <?php if ($version === "web") { ?>
@@ -30,11 +40,9 @@ $version = ($detect->isMobile() && !$detect->isTablet()) ? "wap" : "web";
 
         <!-- script -->
         <script src="//api.map.baidu.com/api?v=2.0&ak=kSmEaa2spbYKGxtao1FdpVGq"></script>
-        <?php if ($version === "wap") { ?> <script src="js/zepto.min.js"></script> <?php } ?>
-        <?php if ($version === "web") { ?> <script src="js/jquery-1.11.1.min.js"></script> <?php } ?>
         <script src="js/utility.js"></script>
-        <?php if ($version === "wap") { ?> <script src="js/main.wap.js"></script> <?php } ?>
-        <?php if ($version === "web") { ?> <script src="js/main.web.js"></script> <?php } ?>
+        <?php if ($version === "wap") { ?> <script src="<?= $wapScript ?>"></script> <?php } ?>
+        <?php if ($version === "web") { ?> <script src="<?= $webScript ?>"></script> <?php } ?>
         <!-- baidu site center -->
         <script>
             var _hmt = _hmt || [];
