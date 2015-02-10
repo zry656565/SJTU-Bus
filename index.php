@@ -20,7 +20,7 @@ $version = ($detect->isMobile() && !$detect->isTablet()) ? "wap" : "web";
 
         <?php if ($version === "web") { ?>
         <!-- fork me on github -->
-        <a id="forkme" href="https://github.com/zry656565/SJTU-Bus"><img style="position: absolute; top: 0; right: 0; border: 0;" src="images/fork.png" alt="Fork me on GitHub"></a>
+        <a id="forkme" href="https://github.com/zry656565/SJTU-Bus"><img src="images/fork.png" alt="Fork me on GitHub"></a>
         <?php } ?>
 
         <!-- feedback -->
