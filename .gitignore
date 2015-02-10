@@ -1,5 +1,8 @@
 #phpstorm settings
 .idea
 
+#FIS output folder
+build
+
 .svn
 .svn/*
