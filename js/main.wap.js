@@ -67,7 +67,7 @@
                                 }
                             }
                         });
-                        $(closestMarker.marker.domElement).click();
+                        $(closestMarker.marker).click();
                         console.log('Location:' + loc.point.lng + ',' + loc.point.lat);
                     } else {
                         alert('抱歉，获取您的位置失败。');

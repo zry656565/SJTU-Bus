@@ -46,7 +46,7 @@ foreach ($arr['pkg'] as $id => $obj) {
         </a>
 
         <!-- script -->
-        <script src="//api.map.baidu.com/api?v=1.3&ak=kSmEaa2spbYKGxtao1FdpVGq&services=true"></script>
+        <script src="//api.map.baidu.com/api?v=2.0&ak=kSmEaa2spbYKGxtao1FdpVGq&services=true"></script>
         <script src="js/utility.js"></script>
         <?php if ($debug) {
             if ($version === "wap") { ?>
