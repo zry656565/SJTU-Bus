@@ -11,5 +11,8 @@ fis.config.merge({
             'js/jquery-1.11.1.min.js',
             'js/main.web.js'
         ]
+    },
+    modules: {
+        postpackager: 'simple'
     }
 });
