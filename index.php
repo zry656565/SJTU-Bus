@@ -20,8 +20,11 @@ foreach ($arr['pkg'] as $id => $obj) {
 <html>  
     <head>  
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="telephone=no" name="format-detection">
         <title>上海交通大学校园巴士时刻表 by JerryZou</title>
+        <link rel="apple-touch-icon" href="images/bus_icon.png">
         <?php if ($version == 'wap')  {?> <link href="css/main.wap.css" rel="stylesheet"/> <?php } ?>
         <?php if ($version == 'web')  {?> <link href="css/main.web.css" rel="stylesheet"/> <?php } ?>
     </head>
