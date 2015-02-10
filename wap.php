@@ -5,8 +5,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta content="yes" name="apple-mobile-web-app-capable">
 	<meta content="telephone=no" name="format-detection">
-	<title>上海交大校园巴士时刻表</title>
-	<link rel="shortcut icon apple-touch-icon" type="image/x-icon" href="images/bus_icon.png">
+	<title>交大校车</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/bus_icon.png">
+	<link rel="apple-touch-icon" href="images/bus_icon.png">
 	<meta name="keywords" content="上海交大,校园巴士,校车,教工班车,时刻表,上海交通大学,JerryZou,邹润阳">
 	<meta name="description" content="上海交通大学校园巴士时刻表 by Jerry Zou，你可以在这里查看详细的校园巴士到站时间。">
 	<link href="css/main.wap.css" rel="stylesheet"/>
