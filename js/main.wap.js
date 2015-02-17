@@ -49,9 +49,35 @@
             map.addOverlay(polyline);
 
             $('#geo-btn').click(function(){
+                var spinner;
+
+                //初始化一个spinner
+                if (spinner) {
+                    $('#spinner').show();
+                } else {
+                    spinner = new Spinner({
+                        lines: 7,
+                        length: 0,
+                        width: 9,
+                        radius: 10,
+                        corners: 1,
+                        rotate: 0,
+                        direction: 1,
+                        color: '#000',
+                        speed: 1.4,
+                        trail: 38,
+                        shadow: true,
+                        hwaccel: false,
+                        className: 'spinner',
+                        zIndex: 2e9,
+                        top: '50%',
+                        left: '50%'
+                    }).spin($('#spinner')[0]);
+                }
                 var geolocation = new BMap.Geolocation();
                 geolocation.getCurrentPosition(function (loc) {
                     if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+                        $('#spinner').hide();
                         var closestMarker = {
                             marker: null,
                             distance: Number.MAX_VALUE
@@ -70,6 +96,7 @@
                         $(closestMarker.marker).click();
                         console.log('Location:' + loc.point.lng + ',' + loc.point.lat);
                     } else {
+                        $('#spinner').hide();
                         alert('抱歉，获取您的位置失败。');
                     }
                 }, {enableHighAccuracy: true})

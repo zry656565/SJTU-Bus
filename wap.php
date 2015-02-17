@@ -16,6 +16,7 @@
 <body>
 
 <div id="container"></div>
+<div id="spinner"></div>
 
 <div id="geo-btn" class="btn">查看最近车站</div>
 <a href="http://jerryzou.com/posts/sjtuBusFeedback/">
@@ -26,6 +27,7 @@
 <script src="//api.map.baidu.com/api?v=2.0&ak=kSmEaa2spbYKGxtao1FdpVGq&services=true"></script>
 <script src="js/utility.js"></script>
 <script src="js/zepto.min.js"></script>
+<script src="js/spin.js"></script>
 <script src="js/main.wap.js"></script>
 <!-- baidu site center -->
 <script>

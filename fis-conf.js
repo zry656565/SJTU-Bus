@@ -5,6 +5,7 @@ fis.config.merge({
     pack: {
         'js/wap.js': [
             'js/zepto.min.js',
+            'js/spin.js',
             'js/main.wap.js'
         ],
         'js/web.js': [
