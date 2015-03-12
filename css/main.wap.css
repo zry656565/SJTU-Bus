@@ -73,19 +73,30 @@ span.red {
 }
 
 /*===========================================*/
-/* feedback */
+/* feedback and geo*/
 /*===========================================*/
-#feedback {
+.btn {
 	background: #333;
-	bottom: 0;
 	color: white;
 	padding: 4px 0;
-	position: absolute;
-	opacity: 0.75;
+	opacity: 0.8;
 	text-align: center;
-	width: 100%;
+	width: 50%;
 }
 
-#feedback:hover {
+.btn:active {
 	opacity: 1.0;
+}
+
+#geo-btn {
+	bottom: 0;
+	left: -1px;
+	position: absolute;
+	border-right: 1px solid white;
+}
+
+#feedback {
+	bottom: 0;
+	right: 0;
+	position: absolute;
 }

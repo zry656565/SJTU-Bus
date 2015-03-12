@@ -7,15 +7,18 @@
             var timeList = data.startTime,
                 dongchuanTime = data.dongchuanTime,
                 stopList = data.stopList,
-                stopTime = data.stopTime;
+                stopTime = data.stopTime,
+                markerList = [],
+                i;
 
-            for (var i = 0; i < stopList.length; i++) {
+            for (i = 0; i < stopList.length; i++) {
                 (function (i) {
                     var point = new BMap.Point(stopList[i][1], stopList[i][2]);
                     var marker = new BMap.Marker(point);
                     var label = new BMap.Label(stopList[i][0],{offset:new BMap.Size(20,-10)});
                     marker.setLabel(label);
                     map.addOverlay(marker);
+                    markerList.push(marker);
                     var stopName = stopList[i][0];
                     var sContent = SBus.initContentMobile(stopName, i===0);
                     if (i===0) {
@@ -39,11 +42,65 @@
             //绘制路线
             var lineList = data.lineList,
                 pointArr = [];
-            for (var i = 0; i < lineList.length; i++) {
+            for (i = 0; i < lineList.length; i++) {
                 pointArr.push(new BMap.Point(lineList[i][0], lineList[i][1]));
             }
             var polyline = new BMap.Polyline(pointArr, {strokeColor:"blue", strokeWeight:5, strokeOpacity:0.5});
             map.addOverlay(polyline);
+
+            $('#geo-btn').click(function(){
+                var spinner;
+
+                //初始化一个spinner
+                if (spinner) {
+                    $('#spinner').show();
+                } else {
+                    spinner = new Spinner({
+                        lines: 7,
+                        length: 0,
+                        width: 9,
+                        radius: 10,
+                        corners: 1,
+                        rotate: 0,
+                        direction: 1,
+                        color: '#000',
+                        speed: 1.4,
+                        trail: 38,
+                        shadow: true,
+                        hwaccel: false,
+                        className: 'spinner',
+                        zIndex: 2e9,
+                        top: '50%',
+                        left: '50%'
+                    }).spin($('#spinner')[0]);
+                }
+                var geolocation = new BMap.Geolocation();
+                geolocation.getCurrentPosition(function (loc) {
+                    if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+                        $('#spinner').hide();
+                        var closestMarker = {
+                            marker: null,
+                            distance: Number.MAX_VALUE
+                        };
+
+                        markerList.forEach(function(marker) {
+                            var distance = Math.sqrt(Math.pow((marker.point.lng - loc.point.lng), 2)
+                                            + Math.pow((marker.point.lat - loc.point.lat), 2));
+                            if (closestMarker.distance > distance) {
+                                closestMarker = {
+                                    marker: marker,
+                                    distance: distance
+                                }
+                            }
+                        });
+                        $(closestMarker.marker).click();
+                        console.log('Location:' + loc.point.lng + ',' + loc.point.lat);
+                    } else {
+                        $('#spinner').hide();
+                        alert('抱歉，获取您的位置失败。');
+                    }
+                }, {enableHighAccuracy: true})
+            });
         });
     });
 })(Zepto);
