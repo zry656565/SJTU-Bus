@@ -3,7 +3,7 @@
         var map = new BMap.Map("container");
         map.centerAndZoom(new BMap.Point(121.443235,31.031303), 16); //将中心位置设置到上海交大
 
-        $.getJSON( "data.json?v=1.0.1", function( data ) {
+        $.getJSON( "data.json?v=1.1.0", function( data ) {
             var timeList = data.startTime,
                 dongchuanTime = data.dongchuanTime,
                 stopList = data.stopList,

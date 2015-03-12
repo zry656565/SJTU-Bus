@@ -8,7 +8,7 @@
             console.log(e.point.lng + "," + e.point.lat);
         });*/
         
-        $.getJSON( "data.json?v=1.0.1", function( data ) {
+        $.getJSON( "data.json?v=1.1.0", function( data ) {
             var timeList = data.startTime,
                 dongchuanTime = data.dongchuanTime,
                 stopList = data.stopList,
