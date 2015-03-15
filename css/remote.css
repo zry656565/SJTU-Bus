@@ -1,0 +1,64 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+.scroll-outer {
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+}
+#content {
+  padding: 0 0 50px;
+}
+#content td {
+  line-height: 1.4;
+  vertical-align: top;
+}
+#content span {
+  padding: 0 2px;
+}
+#content .not-direct {
+  color: #9370DB;
+}
+#content .not-direct:after {
+  content: '非直达';
+  color: #9370DB;
+}
+#content [data-num='1'] {
+  color: #EE3B3B;
+}
+#content [data-num='2'] {
+  color: #FFDEAD;
+}
+#content [data-num='3'] {
+  color: #3CB371;
+}
+/* footer btn group
+===========================================*/
+#footer-btn-group {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  padding: 10px 0;
+  border-top: 1px solid #777;
+  text-align: center;
+}
+#footer-btn-group a {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  box-sizing: border-box;
+  width: 49%;
+}
+#footer-btn-group a:active {
+  opacity: 1.0;
+}
+#footer-btn-group a:last-child {
+  border-right: 0;
+}

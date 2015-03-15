@@ -45,5 +45,16 @@ if (!$detect->isMobile() || $detect->isTablet()) {
 <div id="tips">温馨提示：如果您使用的iOS设备的Safari浏览器访问本页面，可以添加本页到桌面以获得原生App的体验。</div>
 <div id="footer">Work by Jerry Zou.</div>
 
+<!-- baidu site center -->
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?f4dc438d8e60d1de1b6d1a9f197ddfdc";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+
 </body>
 </html>
