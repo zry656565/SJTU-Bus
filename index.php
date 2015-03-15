@@ -1,0 +1,48 @@
+<?php
+//Here is temporary solution for no web version for 2.0
+require_once 'include/Mobile_Detect.php';
+$detect = new Mobile_Detect;
+
+if (!$detect->isMobile() || $detect->isTablet()) {
+	require('web.php');
+	die();
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="telephone=no" name="format-detection">
+	<title>交大校车</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/bus_icon.png">
+	<link rel="apple-touch-icon" href="images/bus_icon.png">
+	<meta name="author" content="JerryZou">
+	<meta name="keywords" content="上海交大,校园巴士,校车,教工班车,时刻表,上海交通大学,JerryZou,邹润阳">
+	<meta name="description" content="上海交通大学校园巴士时刻表 by Jerry Zou，你可以在这里查看详细的校园巴士到站时间。">
+	<link href="css/info.css" rel="stylesheet"/>
+</head>
+<body>
+
+<div id="content">
+	<h1>交大校车</h1>
+	<a class="big-button" href="/campus.php">校园巴士时刻表</a>
+	<a class="big-button" href="/remote.php">教工班车时刻表</a>
+	<a class="big-button" href="http://jerryzou.com/posts/sjtuBusFeedback/">意见反馈</a>
+	<script>
+		//prevent opening a new window in Safari
+		var a = document.getElementsByTagName("a");
+		for(var i=0; i< a.length; i++) {
+			a[i].onclick = function() {
+				window.location = this.getAttribute("href");
+				return false;
+			}
+		}
+	</script>
+</div>
+<div id="tips">温馨提示：如果您使用的iOS设备的Safari浏览器访问本页面，可以添加本页到桌面以获得原生App的体验。</div>
+<div id="footer">Work by Jerry Zou.</div>
+
+</body>
+</html>

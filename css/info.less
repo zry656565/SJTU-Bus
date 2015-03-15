@@ -1,0 +1,89 @@
+@weak-color: #999;
+
+html {
+  height: 100%;
+  background: url(../images/bus_bg.jpg);
+  background-size: cover;
+}
+
+body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  position: relative;
+}
+
+.abs-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#content {
+  font-size: 22px;
+  width: 80%;
+  height: 500px;
+  margin: auto;
+  text-align: center;
+  .abs-center();
+  @media (max-height: 600px) {
+    height: 400px;
+  }
+  @media (max-height: 500px) {
+    height: 300px;
+  }
+
+  h1 {
+    color: white;
+    margin: 0 0 100px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
+    @media (max-height: 600px) {
+      margin: 0 0 60px;
+    }
+    @media (max-height: 500px) {
+      margin: 0 0 30px;
+    }
+  }
+
+  .big-button {
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    margin: 10px 0;
+    color: #333;
+    background: #fff;
+    opacity: 0.9;
+    text-decoration: none;
+    @media (max-height: 600px) {
+      font-size: 18px;
+      padding: 10px 0;
+    }
+  }
+}
+
+#tips {
+  position: absolute;
+  box-sizing: border-box;
+  width: 80%;
+  font-size: 14px;
+  padding: 10px;
+  line-height: 1.4;
+  color: @weak-color;
+  text-align: justify;
+  background: #fff;
+  opacity: 0.8;
+  left: 10%;
+  bottom: 40px;
+}
+
+#footer {
+  color: @weak-color;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  padding: 5px 0;
+}
