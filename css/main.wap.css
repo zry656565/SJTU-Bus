@@ -1,102 +1,85 @@
 html {
-	height: 100%
+  height: 100%;
 }
-
-body{
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	color: #333;
-	font-family: sans-serif;
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-family: sans-serif;
 }
-
-#container{
-	height: 100%;
-}
-
 /*===========================================*/
 /*  stop message  */
 /*===========================================*/
-.tip-scroll {
-	margin: 5px 0 0;
-	max-width: 450px;
-	min-height: 100px;
-	max-height: 200px;
-	height: 80%;
-	overflow-y: scroll;
+#container {
+  height: 100%;
 }
-
-.top-content {
-	width: 100%;
+#container h4.title {
+  margin: 0 0 5px 0;
+  padding: 0.2em 0;
 }
-
-h4.title {
-	margin:0 0 5px 0;
-	padding:0.2em 0;
+#container p {
+  width: 100%;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 13px;
+  word-spacing: 5px;
 }
-
-.tip-content h5.direct {
-	margin: 8px 0 5px 0;
+#container p.attention {
+  color: #666;
 }
-
-p {
-	width: 100%;
-	margin:0;
-	line-height:1.5;
-	font-size:13px;
-	word-spacing: 5px;
+#container p.footer {
+  margin-top: 10px;
+  color: #aaa;
 }
-
-p.attention {
-	color: #666;
+#container span.red {
+  color: #a00;
 }
-
-p.footer {
-	margin-top: 10px;
-	color: #aaa;
+#container .tip-scroll {
+  margin: 5px 0 0;
+  max-width: 450px;
+  min-height: 100px;
+  max-height: 200px;
+  height: 80%;
+  overflow-y: scroll;
 }
-
-.tip-content p.timetable {
-	color: green;
+#container .tip-scroll .tip-content {
+  width: 100%;
 }
-
-.tip-content span.blue {
-	color: blue;
+#container .tip-scroll h5.direct {
+  margin: 8px 0 5px 0;
 }
-
-span.red {
-	color: #a00;
+#container .tip-scroll p.timetable {
+  color: green;
 }
-
-.tip-content span.silver {
-	color: LightGray;
+#container .tip-scroll span.blue {
+  color: blue;
 }
-
+#container .tip-scroll span.silver {
+  color: #d3d3d3;
+}
 /*===========================================*/
 /* feedback and geo*/
 /*===========================================*/
-.btn {
-	background: #333;
-	color: white;
-	padding: 4px 0;
-	opacity: 0.8;
-	text-align: center;
-	width: 50%;
+#footer-btn-group {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  padding: 10px 0;
+  border-top: 1px solid #777;
+  text-align: center;
 }
-
-.btn:active {
-	opacity: 1.0;
+#footer-btn-group a {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  box-sizing: border-box;
+  width: 49%;
 }
-
-#geo-btn {
-	bottom: 0;
-	left: -1px;
-	position: absolute;
-	border-right: 1px solid white;
+#footer-btn-group a:active {
+  opacity: 1.0;
 }
-
-#feedback {
-	bottom: 0;
-	right: 0;
-	position: absolute;
+#footer-btn-group a:last-child {
+  border-right: 0;
 }

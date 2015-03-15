@@ -1,5 +1,11 @@
 (function($) {
     $(function () {
+        //prevent opening a new window in Safari
+        $('.link').click(function() {
+            window.location = $(this).attr("href");
+            return false;
+        });
+
         var map = new BMap.Map("container");
         map.centerAndZoom(new BMap.Point(121.443235,31.031303), 16); //将中心位置设置到上海交大
 
