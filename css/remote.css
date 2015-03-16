@@ -1,7 +1,5 @@
 html {
   height: 100%;
-  background: url(../images/city.jpg);
-  background-size: cover;
 }
 body {
   height: 100%;
@@ -26,11 +24,20 @@ body {
   line-height: 1.4;
   color: #999;
   padding: 0 20px;
+  margin: 0 0 0 10px;
 }
 #content h2 {
-  margin: 20px 0 10px;
-  padding: 0 0 10px 10px;
+  margin: 20px 10px 15px;
+  padding: 0 0 5px;
   border-bottom: 1px solid #999;
+}
+#content h2 span {
+  font-size: 0.6em;
+}
+#content h3 {
+  font-size: 18px;
+  margin-left: 10px;
+  color: #27408B;
 }
 #content table {
   font-size: 18px;
@@ -42,6 +49,13 @@ body {
 }
 #content td:first-child {
   width: 50px;
+}
+#content .all-time {
+  font-size: 18px;
+  margin: 0 10px;
+}
+#content .all-time span {
+  padding: 0 10px 0 0;
 }
 #content span {
   padding: 0 10px 0 0;
