@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   color: #555;
-  font-family: Helvetica, Georgia, sans-serif;
+  font-family: Avenir, Helvetica, Georgia, 'Hiragino Sans GB', 'Microsoft Yahei', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
 }
 .scroll-outer {
   overflow-y: scroll;

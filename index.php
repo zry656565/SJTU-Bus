@@ -42,7 +42,7 @@ if (!$detect->isMobile() || $detect->isTablet()) {
 		}
 	</script>
 </div>
-<div id="tips">温馨提示：如果您使用的iOS设备的Safari浏览器访问本页面，可以添加本页到桌面以获得原生App的体验。</div>
+<div id="tips">温馨提示：如果您使用iOS设备的Safari浏览器访问本页面，可以添加本页到桌面以获得原生App的体验。</div>
 <div id="footer">Work by Jerry Zou.</div>
 
 <!-- baidu site center -->
