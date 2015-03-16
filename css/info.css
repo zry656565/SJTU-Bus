@@ -4,7 +4,9 @@ html {
   background-size: cover;
 }
 body {
+  width: 100%;
   height: 100%;
+  overflow: hidden;
   margin: 0;
   padding: 0;
   color: #333;
@@ -21,7 +23,7 @@ body {
 #content {
   font-size: 22px;
   width: 80%;
-  height: 500px;
+  height: 460px;
   margin: auto;
   text-align: center;
   position: absolute;
@@ -32,7 +34,7 @@ body {
 }
 @media (max-height: 600px) {
   #content {
-    height: 400px;
+    height: 360px;
   }
 }
 @media (max-height: 500px) {
@@ -56,11 +58,11 @@ body {
   width: 100%;
   padding: 0 0 0 60px;
   text-shadow: 2px 2px 1px #000000;
-  margin: -5px 0 80px;
+  margin: -5px 0 120px;
 }
 @media (max-height: 600px) {
   #content #by {
-    margin-bottom: 60px;
+    margin-bottom: 70px;
   }
 }
 @media (max-height: 500px) {
@@ -92,10 +94,11 @@ body {
   font-size: 14px;
   padding: 10px;
   line-height: 1.4;
-  color: #aaa;
+  color: #ccc;
   text-align: justify;
   bottom: 0;
-  border-top: 1px solid #aaa;
+  border-top: 1px solid #ccc;
+  text-shadow: 2px 2px 1px #000000;
 }
 @media (max-height: 568px) {
   #tips {
