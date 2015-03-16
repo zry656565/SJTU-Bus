@@ -19,7 +19,8 @@
 <div class="scroll-outer">
 	<div id="content">
 		<h1>教工班车时刻表</h1>
-		<h2>徐汇 -> 闵行</h2>
+		<p class="tips">特别解释：如9点有3班车，则在一般情况下8:40，8:50，9:00各有一班。时刻表上的时间一般为那个时间段最后一辆班车的出发时间。</p>
+		<h2>徐汇 &rarr; 闵行</h2>
 		<table>
 			<tr><td>6:40</td><td>天钥桥路始发（途径上中）</td></tr>
 			<tr><td>7:00</td><td>徐汇校区、交大新村、田林、古美（途径罗阳）分别始发</td></tr>
@@ -27,7 +28,7 @@
 			<tr><td>7:30</td><td>徐汇校区、交大新村、田林、古美（途径罗阳）分别始发</td></tr>
 			<tr><td>9:00</td><td><span data-num="3">3班</span></td></tr>
 			<tr><td>10:10</td><td><span data-num="1">1班</span></td></tr>
-			<tr><td>12:00</td><td><span data-num="2">2班</span><span class="not-direct">其中一班</span>途径交大新村、田林</td></tr>
+			<tr><td>12:00</td><td><span data-num="2">2班</span>途径交大新村、田林</td></tr>
 			<tr><td>13:00</td><td><span data-num="3">3班</span></td></tr>
 			<tr><td>15:00</td><td><span data-num="2">2班</span></td></tr>
 			<tr><td>17:00</td><td><span data-num="3">3班</span></td></tr>
@@ -35,20 +36,22 @@
 			<tr><td>20:00</td><td><span data-num="2">2班</span></td></tr>
 			<tr><td>21:30</td><td><span data-num="2">2班</span></td></tr>
 		</table>
-		<h2>闵行 -> 徐汇</h2>
+		<h2>闵行 &rarr; 徐汇</h2>
 		<table>
 			<tr><td>6:40</td><td><span data-num="2">2班</span></td></tr>
 			<tr><td>8:00</td><td><span data-num="3">3班</span></td></tr>
-			<tr><td>10:10</td><td><span data-num="2">2班</span><span class="not-direct">其中一班</span>途径田林、交大新村</td></tr>
-			<tr><td>12:15</td><td><span data-num="3">3班</span><span class="not-direct">其中一班</span>途径田林、交大新村</td></tr>
+			<tr><td>10:10</td><td><span data-num="2">2班</span>途径田林、交大新村</td></tr>
+			<tr><td>12:15</td><td><span data-num="3">3班</span>途径田林、交大新村</td></tr>
 			<tr><td>14:10</td><td><span data-num="2">2班</span></td></tr>
 			<tr><td>16:00</td><td><span data-num="3">3班</span></td></tr>
-			<tr><td>17:00</td><td>徐汇校区（直达，途径罗阳、上中、天钥、交大新村）、田林、古美<br/>教工亦可在东区行政B楼官场乘车直达徐汇校区</td></tr>
+			<tr><td>17:00</td><td>徐汇校区（直达，途径罗阳、上中、天钥、交大新村）、田林、古美； 教工亦可在东区行政B楼官场乘车直达徐汇校区</td></tr>
 			<tr><td>18:30</td><td><span data-num="2">2班</span></td></tr>
 			<tr><td>20:40</td><td><span data-num="2">2班</span></td></tr>
 		</table>
 	</div>
 </div>
+
+<div id="background-overlay"></div>
 
 <div id="footer-btn-group">
 	<a class="link" href="/">返回上页</a>

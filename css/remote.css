@@ -1,11 +1,13 @@
 html {
   height: 100%;
+  background: url(../images/city.jpg);
+  background-size: cover;
 }
 body {
   height: 100%;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #555;
 }
 .scroll-outer {
   overflow-y: scroll;
@@ -14,20 +16,35 @@ body {
 }
 #content {
   padding: 0 0 50px;
+  text-align: justify;
+}
+#content h1 {
+  padding-left: 10px;
+}
+#content .tips {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #999;
+  padding: 0 20px;
+}
+#content h2 {
+  margin: 20px 0 10px;
+  padding: 0 0 10px 10px;
+  border-bottom: 1px solid #999;
+}
+#content table {
+  font-size: 18px;
+  margin: 0 10px;
 }
 #content td {
   line-height: 1.4;
   vertical-align: top;
 }
+#content td:first-child {
+  width: 50px;
+}
 #content span {
-  padding: 0 2px;
-}
-#content .not-direct {
-  color: #9370DB;
-}
-#content .not-direct:after {
-  content: '非直达';
-  color: #9370DB;
+  padding: 0 10px 0 0;
 }
 #content [data-num='1'] {
   color: #EE3B3B;
@@ -37,6 +54,16 @@ body {
 }
 #content [data-num='3'] {
   color: #3CB371;
+}
+#background-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #fff;
+  opacity: 0.8;
 }
 /* footer btn group
 ===========================================*/
@@ -48,6 +75,7 @@ body {
   padding: 10px 0;
   border-top: 1px solid #777;
   text-align: center;
+  z-index: 1;
 }
 #footer-btn-group a {
   display: inline-block;
