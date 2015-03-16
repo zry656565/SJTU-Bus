@@ -28,6 +28,7 @@ if (!$detect->isMobile() || $detect->isTablet()) {
 
 <div id="content">
 	<h1>交大校车<span class="version">v2.0</span></h1>
+	<div id="by">by Jerry Zou</div>
 	<a class="internal-link big-button" href="/campus.php">校园巴士时刻表</a>
 	<a class="internal-link big-button" href="/remote.php">教工班车时刻表</a>
 	<a class="big-button" href="http://jerryzou.com/posts/sjtuBusFeedback/">意见反馈</a>
@@ -42,8 +43,7 @@ if (!$detect->isMobile() || $detect->isTablet()) {
 		}
 	</script>
 </div>
-<div id="tips">温馨提示：如果您使用iOS设备的Safari浏览器访问本页面，可以添加本页到桌面以获得原生App的体验。</div>
-<div id="footer">Work by Jerry Zou.</div>
+<div id="tips">温馨提示：如果您使用iOS设备的Safari浏览器访问本页面，可以添加本页到桌面以获得原生APP的体验。</div>
 
 <!-- baidu site center -->
 <script>

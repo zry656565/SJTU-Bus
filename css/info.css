@@ -1,6 +1,6 @@
 html {
   height: 100%;
-  background: url(../images/Solo-Bus.jpg);
+  background: url(../images/Solo-Bus-1.5.jpg);
   background-size: cover;
 }
 body {
@@ -41,27 +41,31 @@ body {
   }
 }
 #content h1 {
-  color: white;
-  margin: 0 0 100px;
+  color: #fff;
+  margin: 0 0 1px;
   text-shadow: 2px 2px 1px #000000;
 }
 #content h1 .version {
   font-size: 20px;
   padding: 0 0 0 5px;
 }
+#content #by {
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 0 0 0 60px;
+  text-shadow: 2px 2px 1px #000000;
+  margin: -5px 0 80px;
+}
 @media (max-height: 600px) {
-  #content h1 {
-    margin: 0 0 60px;
+  #content #by {
+    margin-bottom: 60px;
   }
 }
 @media (max-height: 500px) {
-  #content h1 {
-    margin: 0 0 30px;
-  }
-}
-@media (max-height: 450px) {
-  #content h1 {
-    margin: 0 0 15px;
+  #content #by {
+    margin-bottom: 30px;
   }
 }
 #content .big-button {
@@ -84,29 +88,17 @@ body {
 #tips {
   position: absolute;
   box-sizing: border-box;
-  width: 80%;
+  width: 100%;
   font-size: 14px;
   padding: 10px;
   line-height: 1.4;
-  color: #666;
+  color: #aaa;
   text-align: justify;
-  background: #fff;
-  opacity: 0.7;
-  left: 10%;
-  bottom: 40px;
-  border-radius: 4px;
+  bottom: 0;
+  border-top: 1px solid #aaa;
 }
-@media (max-height: 450px) {
+@media (max-height: 568px) {
   #tips {
     font-size: 12px;
   }
-}
-#footer {
-  color: #ccc;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  width: 100%;
-  padding: 5px 0;
-  text-shadow: 2px 2px 1px #000000;
 }
