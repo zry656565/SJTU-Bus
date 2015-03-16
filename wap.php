@@ -22,7 +22,7 @@
 
 <div id="footer-btn-group">
 	<a class="link" href="/">返回上页</a>
-	<a id="geo-btn">查看最近车站</a>
+	<a id="geo-btn">定位最近车站</a>
 </div>
 
 <!-- script -->
