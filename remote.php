@@ -68,7 +68,6 @@
 	</script>
 </div>
 
-<script src="library/inobounce.min.js"></script>
 <!-- baidu site center -->
 <script>
 	var _hmt = _hmt || [];
