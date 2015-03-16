@@ -27,6 +27,11 @@ body {
   padding: 0 20px;
   margin: 0 0 0 10px;
 }
+@media (max-width: 320px) {
+  #content .tips {
+    font-size: 14px;
+  }
+}
 #content h2 {
   margin: 20px 10px 15px;
   padding: 0 0 5px;
@@ -40,9 +45,19 @@ body {
   margin-left: 10px;
   color: #27408B;
 }
+@media (max-width: 320px) {
+  #content h3 {
+    font-size: 16px;
+  }
+}
 #content table {
   font-size: 18px;
   margin: 0 10px;
+}
+@media (max-width: 320px) {
+  #content table {
+    font-size: 14px;
+  }
 }
 #content td {
   line-height: 1.4;
@@ -57,6 +72,11 @@ body {
 }
 #content .all-time span {
   padding: 0 10px 0 0;
+}
+@media (max-width: 320px) {
+  #content .all-time {
+    font-size: 14px;
+  }
 }
 #content span {
   padding: 0 10px 0 0;
