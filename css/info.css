@@ -59,6 +59,11 @@ body {
     margin: 0 0 30px;
   }
 }
+@media (max-height: 450px) {
+  #content h1 {
+    margin: 0 0 15px;
+  }
+}
 #content .big-button {
   display: block;
   width: 100%;
@@ -90,6 +95,11 @@ body {
   left: 10%;
   bottom: 40px;
   border-radius: 4px;
+}
+@media (max-height: 450px) {
+  #tips {
+    font-size: 12px;
+  }
 }
 #footer {
   color: #ccc;
