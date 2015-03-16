@@ -4,6 +4,7 @@ fis.config.merge({
     },
     pack: {
         'js/wap.js': [
+            'library/inobounce.min.js',
             'library/zepto.min.js',
             'library/spin.js',
             'js/main.wap.js'
