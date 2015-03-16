@@ -4,9 +4,7 @@ html {
   background-size: cover;
 }
 body {
-  width: 100%;
   height: 100%;
-  overflow: hidden;
   margin: 0;
   padding: 0;
   color: #333;
@@ -56,9 +54,10 @@ body {
   color: #fff;
   text-align: center;
   width: 100%;
-  padding: 0 0 0 60px;
+  padding: 0 0 0 130px;
   text-shadow: 2px 2px 1px #000000;
   margin: -5px 0 120px;
+  box-sizing: border-box;
 }
 @media (max-height: 600px) {
   #content #by {
