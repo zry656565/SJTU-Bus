@@ -28,8 +28,8 @@
 <!-- script -->
 <script src="//api.map.baidu.com/api?v=2.0&ak=kSmEaa2spbYKGxtao1FdpVGq&services=true"></script>
 <script src="js/utility.js"></script>
-<script src="js/zepto.min.js"></script>
-<script src="js/spin.js"></script>
+<script src="library/zepto.min.js"></script>
+<script src="library/spin.js"></script>
 <script src="js/main.wap.js"></script>
 <!-- baidu site center -->
 <script>

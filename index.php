@@ -28,12 +28,12 @@ if (!$detect->isMobile() || $detect->isTablet()) {
 
 <div id="content">
 	<h1>交大校车<span class="version">v2.0</span></h1>
-	<a class="big-button" href="/campus.php">校园巴士时刻表</a>
-	<a class="big-button" href="/remote.php">教工班车时刻表</a>
+	<a class="internal-link big-button" href="/campus.php">校园巴士时刻表</a>
+	<a class="internal-link big-button" href="/remote.php">教工班车时刻表</a>
 	<a class="big-button" href="http://jerryzou.com/posts/sjtuBusFeedback/">意见反馈</a>
 	<script>
 		//prevent opening a new window in Safari
-		var a = document.getElementsByTagName("a");
+		var a = document.getElementsByClassName("internal-link");
 		for(var i=0; i< a.length; i++) {
 			a[i].onclick = function() {
 				window.location = this.getAttribute("href");
@@ -45,6 +45,7 @@ if (!$detect->isMobile() || $detect->isTablet()) {
 <div id="tips">温馨提示：如果您使用的iOS设备的Safari浏览器访问本页面，可以添加本页到桌面以获得原生App的体验。</div>
 <div id="footer">Work by Jerry Zou.</div>
 
+<script src="library/inobounce.min.js"></script>
 <!-- baidu site center -->
 <script>
 	var _hmt = _hmt || [];

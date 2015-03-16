@@ -4,5 +4,7 @@
 #FIS output folder
 build
 
+#npm
+node_modules
+
 .svn
-.svn/*
