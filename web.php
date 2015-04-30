@@ -16,9 +16,11 @@
 <!-- fork me on github -->
 <a id="forkme" href="https://github.com/zry656565/SJTU-Bus"><img src="images/fork.png" alt="Fork me on GitHub"></a>
 
-<a href="http://jerryzou.com/posts/sjtuBusFeedback/">
-	<div id="feedback" class="btn">意见反馈</div>
-</a>
+<div id="floatFooter">
+	<div class="header">扫我查看移动版</div>
+	<img src="images/qrcode.gif" alt="移动端访问的二维码" />
+</div>
+
 
 <!-- script -->
 <script src="//api.map.baidu.com/api?v=2.0&ak=kSmEaa2spbYKGxtao1FdpVGq&services=true"></script>

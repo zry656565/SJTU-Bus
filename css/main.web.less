@@ -1,55 +1,68 @@
 html {
-  height: 100%;
+  height:100%
 }
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+
+body{
+  height:100%;
+  margin:0;
+  padding:0;
   color: #333;
   font-family: Avenir, 'Hiragino Sans GB', 'Microsoft Yahei', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
 }
-#container {
-  height: 100%;
+
+#container{
+  height:100%;
 }
+
 /*===========================================*/
 /*  stop message  */
 /*===========================================*/
 .tip-content {
   max-width: 450px;
+
+  h4.title {
+    margin:0 0 5px 0;
+    padding:0.2em 0;
+  }
+
+  h5.direct {
+    margin: 15px 0 5px 0;
+  }
+
+  p {
+    width: 420px;
+    margin:0;
+    line-height:1.5;
+    font-size:13px;
+    word-spacing: 5px;
+  }
+
+  p.attention {
+    color: #666;
+  }
+
+  p.footer {
+    margin-top: 10px;
+    color: #aaa;
+  }
+
+  p.timetable {
+    color: green;
+  }
+
+  span.blue {
+    color: blue;
+  }
+
+  span.red {
+    color: #a00;
+  }
+
+  span.silver {
+    color: LightGray;
+  }
 }
-.tip-content h4.title {
-  margin: 0 0 5px 0;
-  padding: 0.2em 0;
-}
-.tip-content h5.direct {
-  margin: 15px 0 5px 0;
-}
-.tip-content p {
-  width: 420px;
-  margin: 0;
-  line-height: 1.5;
-  font-size: 13px;
-  word-spacing: 5px;
-}
-.tip-content p.attention {
-  color: #666;
-}
-.tip-content p.footer {
-  margin-top: 10px;
-  color: #aaa;
-}
-.tip-content p.timetable {
-  color: green;
-}
-.tip-content span.blue {
-  color: blue;
-}
-.tip-content span.red {
-  color: #a00;
-}
-.tip-content span.silver {
-  color: LightGray;
-}
+
 /*===========================================*/
 /* floatFooter */
 /*===========================================*/
@@ -58,15 +71,18 @@ body {
   bottom: 0;
   right: 0;
   background: white;
+
+  .header {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
 }
-#floatFooter .header {
-  font-size: 14px;
-  padding: 5px 10px;
-}
-#floatFooter img {
-  display: block;
-  margin: 0 auto;
-}
+
 #feedback {
   position: absolute;
   right: 0;
@@ -76,9 +92,11 @@ body {
   color: white;
   opacity: 0.75;
 }
+
 #feedback:hover {
   opacity: 1.0;
 }
+
 /*===========================================*/
 /* fork me */
 /*===========================================*/
