@@ -20,11 +20,9 @@ var SBus = {};
     SBus.initContent = function(stopName, special) {
         return "<div class='tip-content'>" +
            "<h4 class='title'>" + stopName + "</h4>" +
-           "<p class='attention'>1. 灰色班次：当天已停运</p>" +
-           "<p class='attention'>2. 绿色班次：当天可乘坐</p>" +
-           "<p class='attention'>3. 蓝色班次：终点站东川路地铁站</p>" +
-           "<p class='attention'>*. 周六日及法定节假日停运</p>" +
-           (special ? "<p class='attention'>4.红色标注班次终点站［可能］为菁菁堂（根据本站作者的猜测＝。＝）</p>" : '');
+           "<p class='attention'>1. 蓝色班次：终点站东川路地铁站</p>" +
+           "<p class='attention'>2. 周六日及法定节假日停运</p>" +
+           (special ? "<p class='attention'>3.红色标注班次终点站［可能］为菁菁堂（根据本站作者的猜测＝。＝）</p>" : '');
     };
 
     SBus.initContentMobile = function(stopName) {
@@ -86,7 +84,7 @@ var SBus = {};
         if (!directName) {
             return sContent;
         }
-        sContent += "<h5 class='direct'>" + directName + "</h5>" + "<p class='timetable'>"  + "<span class='silver'>";
+        sContent += "<h5 class='direct'>" + directName + "</h5>" + "<p class='timetable'>";
         var j = 0;
         var timeArr = stopTime[directId];
         var blueNum = stopTime[directId + '_blue'];
@@ -100,14 +98,22 @@ var SBus = {};
             return sContent;
         }*/
 
-        for(; j<timeArr.length; j += 2) {
-            if(timeArr[j] < hour || (timeArr[j] == hour && timeArr[j + 1] <= minute)) {
-                sContent += SBus.printTime(timeArr[j], timeArr[j + 1]);
-            } else {
-                break;
+        //If current time < 20:30, show all times with regular color.
+        var showTime = new Date();
+        showTime.setHours(20);
+        showTime.setMinutes(30);
+        if (showTime < Date.now) {
+            sContent += "<span class='silver'>";
+            for(; j<timeArr.length; j += 2) {
+                if(timeArr[j] < hour || (timeArr[j] == hour && timeArr[j + 1] <= minute)) {
+                    sContent += SBus.printTime(timeArr[j], timeArr[j + 1]);
+                } else {
+                    break;
+                }
             }
+            sContent += "</span>";
         }
-        sContent += "</span>";
+
         if(redNum) {
             for(; j<timeArr.length - redNum * 2; j += 2) {
                 sContent += SBus.printTime(timeArr[j], timeArr[j + 1]);
