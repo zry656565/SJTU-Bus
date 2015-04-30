@@ -99,7 +99,11 @@
                                 }
                             }
                         });
-                        $(closestMarker.marker).click();
+                        if (closestMarker.distance < 0.03) {
+                            $(closestMarker.marker).click();
+                        } else {
+                            alert('你离学校有点远哦，走近些再定位吧~');
+                        }
                         console.log('Location:' + loc.point.lng + ',' + loc.point.lat);
                     } else {
                         $('#spinner').hide();
