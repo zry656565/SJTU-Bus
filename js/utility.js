@@ -102,7 +102,7 @@ var SBus = {};
         var showTime = new Date();
         showTime.setHours(20);
         showTime.setMinutes(30);
-        if (showTime < Date.now) {
+        if (showTime > Date.now()) {
             sContent += "<span class='silver'>";
             for(; j<timeArr.length; j += 2) {
                 if(timeArr[j] < hour || (timeArr[j] == hour && timeArr[j + 1] <= minute)) {
