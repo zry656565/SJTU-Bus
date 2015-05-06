@@ -18,7 +18,7 @@
 
 <div id="floatFooter">
 	<div class="header">扫我查看移动版</div>
-	<img src="images/qrcode.gif" alt="移动端访问的二维码" />
+	<img src="images/qrcode.png" alt="移动端访问的二维码" />
 </div>
 
 

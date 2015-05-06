@@ -65,6 +65,7 @@ body {
 }
 #floatFooter img {
   display: block;
+  padding: 2px;
   margin: 0 auto;
 }
 #feedback {
