@@ -20,6 +20,19 @@ fis server start -p 9990 #端口任意指定
 fis release --watch #watch可以保证你的修改即时刷新
 ```
 
+###编译 & 部署线上版本
+本项目目前部署于SAE，而SAE使用SVN作为版本控制工具。因此我写了个[脚本](https://github.com/zry656565/git-for-SAE)来将本项目的代码部署在SAE上：
+```
+#编译线上版本，此处的 `./build` 为指定的输出目录
+fis release --optimize --md5 --pack --dest ./build
+
+#使用git-for-SAE脚本将代码上传到SAE
+cd build
+sae-push.sh sjtubus 3 #staging
+sae-push.sh sjtubus 2 #release
+```
+需要注意的是，`./build`可以修改为任意路径（但如果是输出到本项目的根目录下的话，建议使用`build`文件夹作为输出目录，或者你可以选择修改`fis-conf.js`配置文件中的`project.exclude`）
+
 #更新记录
 - Version: 0.0.1
   - 初级版完成
