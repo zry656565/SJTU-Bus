@@ -44,9 +44,9 @@
 		<table>
 			<tr><td>6:40</td><td><span data-num="2">2班</span></td></tr>
 			<tr><td>8:00</td><td><span data-num="3">3班</span></td></tr>
-			<tr><td>10:10</td><td><span data-num="2">2班</span>途径田林、交大新村</td></tr>
+			<tr><td>10:10</td><td><span data-num="2">2班</span>途径田林、交大新村<span class="alert">6.23-7.3 调整为 10:30</span></td></tr>
 			<tr><td>12:15</td><td><span data-num="3">3班</span>途径田林、交大新村</td></tr>
-			<tr><td>14:10</td><td><span data-num="2">2班</span></td></tr>
+			<tr><td>14:10</td><td><span data-num="2">2班</span><span class="alert">6.23-7.3 调整为 13:30</span></td></tr>
 			<tr><td>16:00</td><td><span data-num="3">3班</span></td></tr>
 			<tr><td>17:00</td><td>徐汇校区（直达，途径罗阳、上中、天钥、交大新村）、田林、古美； 教工亦可在东区行政B楼官场乘车直达徐汇校区</td></tr>
 			<tr><td>18:30</td><td><span data-num="2">2班</span></td></tr>

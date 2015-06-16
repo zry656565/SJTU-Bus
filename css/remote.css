@@ -81,6 +81,14 @@ body {
 #content span {
   padding: 0 10px 0 0;
 }
+#content .alert {
+  /* urgent notification */
+  color: #ee6861;
+  border-left: 1px solid #ee6861;
+  padding-left: 4px;
+  margin-left: 4px;
+  text-decoration: underline;
+}
 #content [data-num='1'] {
   color: #EE3B3B;
 }
