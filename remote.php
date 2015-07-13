@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>交大校车</title>
-	<meta name="apple-mobile-web-app-capable" content="yes" >
+	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="format-detection" content="telephone=no" >
 	<link rel="shortcut icon" type="image/x-icon" href="images/bus_icon.png">
 	<link rel="apple-touch-icon" href="images/bus_icon.png">
@@ -20,7 +20,7 @@
 	<div id="content">
 		<h1>教工班车时刻表</h1>
 		<ul class="tips">
-			<li>本时刻表最后更新时间：2015年3月16日</li>
+			<li>本时刻表最后更新时间：2015年7月13日</li>
 			<li>特别解释：如9点有3班车，则在一般情况下8:40，8:50，9:00各有一班。时刻表上的时间一般为那个时间段最后一辆班车的出发时间。</li>
 		</ul>
 
@@ -44,9 +44,9 @@
 		<table>
 			<tr><td>6:40</td><td><span data-num="2">2班</span></td></tr>
 			<tr><td>8:00</td><td><span data-num="3">3班</span></td></tr>
-			<tr><td>10:10</td><td><span data-num="2">2班</span>途径田林、交大新村<span class="alert">6.23-7.3 调整为 10:30</span></td></tr>
+			<tr><td>10:10</td><td><span data-num="2">2班</span>途径田林、交大新村</td></tr>
 			<tr><td>12:15</td><td><span data-num="3">3班</span>途径田林、交大新村</td></tr>
-			<tr><td>14:10</td><td><span data-num="2">2班</span><span class="alert">6.23-7.3 调整为 13:30</span></td></tr>
+			<tr><td>14:10</td><td><span data-num="2">2班</span></td></tr>
 			<tr><td>16:00</td><td><span data-num="3">3班</span></td></tr>
 			<tr><td>17:00</td><td>徐汇校区（直达，途径罗阳、上中、天钥、交大新村）、田林、古美； 教工亦可在东区行政B楼官场乘车直达徐汇校区</td></tr>
 			<tr><td>18:30</td><td><span data-num="2">2班</span></td></tr>
