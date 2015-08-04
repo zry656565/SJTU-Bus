@@ -89,6 +89,9 @@ body {
   margin-left: 4px;
   text-decoration: underline;
 }
+#content .notice {
+  color: #3CB371;
+}
 #content [data-num='1'] {
   color: #EE3B3B;
 }
