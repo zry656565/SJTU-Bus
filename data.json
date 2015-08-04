@@ -28,11 +28,11 @@
         "direct1_blue": 6,
         "direct2_blue": 1,
         "festival_direct1_blue": 2,
-        "festival_direct1_blue": 1
+        "festival_direct2_blue": 1
     },
     "dongchuanTime": {
         "direct1": [7, 24, 7, 39, 7, 54, 8, 9, 17, 3, 17, 28, 17, 58, 18, 43, 19, 28, 20, 28],
-        "festival_direct1": [8, 9, 16, 58, 17, 43, 18, 28],
+        "festival_direct1": [8, 9],
         "direct1_red": 6,
         "festival_direct1_red": 3    
     },
