@@ -34,7 +34,7 @@
                             sContent += SBus.pushDirectToContent(direct, timeList, stopName);
                         });
                     }
-                    sContent += "<p class='footer'>本时刻表的最后更新时间为：2015年3月12日</p>"  + "</div>";
+                    sContent += "<p class='footer'>本时刻表的最后更新时间为：2015年8月4日</p>"  + "</div>";
                     var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象 
                     marker.addEventListener("click", function(){          
                         map.openInfoWindow(infoWindow, point); //开启信息窗口
