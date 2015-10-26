@@ -22,10 +22,20 @@
 		<ul class="tips">
             <li class="notice">2015年11月2日起实施新的时刻表</li>
             <li>本时刻表最后更新时间：2015年11月2日</li>
-			<li>特别解释：如9点有3班车，则在一般情况下8:40，8:50，9:00各有一班。时刻表上的时间一般为那个时间段最后一辆班车的出发时间。</li>
 		</ul>
 
-		<h2>徐汇 &rarr; 闵行<span>（工作日 - 周一至周五）</span></h2>
+		<div id="bookmark-container">
+			<a href="#xh-to-mh-workday">徐汇 &rarr; 闵行 | 工作日</a>
+			<a href="#mh-to-xh-workday">闵行 &rarr; 徐汇 | 工作日</a>
+			<br/>
+			<a href="#xh-to-mh-special">徐汇 &rarr; 闵行 | 特殊日</a>
+			<a href="#mh-to-xh-special">闵行 &rarr; 徐汇 | 特殊日</a>
+			<br/>
+			<a href="#qb-to-mh">七宝 &rarr; 闵行</a>
+			<a href="#mh-to-qb">闵行 &rarr; 七宝</a>
+		</div>
+
+		<h2 id="xh-to-mh-workday">徐汇 &rarr; 闵行<span>（工作日 - 周一至周五）</span></h2>
 		<table>
 			<tr><td>6:45</td><td>天钥桥路始发，途经上中、罗阳至闵行</td></tr>
 			<tr><td>6:45</td><td>田林始发，途经古美至闵行</td></tr>
@@ -41,11 +51,11 @@
 			<tr><td>20:00</td><td><span data-num="2">2班</span></td></tr>
 			<tr><td>21:30</td><td><span data-num="2">2班</span></td></tr>
 		</table>
-		<h2>闵行 &rarr; 徐汇<span>（工作日 - 周一至周五）</span></h2>
+		<h2 id="mh-to-xh-workday">闵行 &rarr; 徐汇<span>（工作日 - 周一至周五）</span></h2>
 		<table>
 			<tr><td>6:40</td><td><span data-num="2">2班</span></td></tr>
-			<tr><td>7:15</td><td><span data-num="3">3班</span></td></tr>
-			<tr><td>8:30</td><td><span data-num="3">3班</span></td></tr>
+			<tr><td>7:15</td><td><span data-num="3">直达</span></td></tr>
+			<tr><td>8:30</td><td><span data-num="3">直达</span></td></tr>
 			<tr><td>10:10</td><td><span data-num="2">2班</span></td></tr>
 			<tr><td>12:15</td><td><span data-num="3">3班</span></td></tr>
 			<tr><td>14:10</td><td><span data-num="2">2班</span></td></tr>
@@ -55,7 +65,7 @@
 			<tr><td>20:40</td><td><span data-num="2">2班</span></td></tr>
 		</table>
 
-		<h2>徐汇 &rarr; 闵行<span>（特殊）</span></h2>
+		<h2 id="xh-to-mh-special">徐汇 &rarr; 闵行<span>（特殊）</span></h2>
 		<h3>正常双休日、节假日</h3>
 		<div class="all-time">
 			<span>8:30</span>
@@ -74,7 +84,7 @@
 			<span>8:30</span>
 			<span>17:30</span>
 		</div>
-		<h2>闵行 &rarr; 徐汇<span>（特殊）</span></h2>
+		<h2 id="mh-to-xh-special">闵行 &rarr; 徐汇<span>（特殊）</span></h2>
 		<h3>正常双休日、节假日</h3>
 		<div class="all-time">
 			<span>7:30</span>
@@ -95,7 +105,7 @@
 		</div>
 
 		<!-- 七宝 - 闵行 -->
-		<h2>七宝 &rarr; 闵行</h2>
+		<h2 id="qb-to-mh">七宝 &rarr; 闵行</h2>
 		<h3>周一至周五</h3>
 		<div class="all-time">
 			<span>7:00</span>
@@ -108,7 +118,7 @@
 			<span>8:00</span>
 			<span>16:10</span>
 		</div>
-		<h2>闵行 &rarr; 七宝 <span>（菁菁堂候车）</span></h2>
+		<h2 id="mh-to-qb">闵行 &rarr; 七宝 <span>（菁菁堂候车）</span></h2>
 		<h3>周一至周五</h3>
 		<div class="all-time">
 			<span>8:00</span>
