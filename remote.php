@@ -54,8 +54,8 @@
 		<h2 id="mh-to-xh-workday">闵行 &rarr; 徐汇<span>（工作日 - 周一至周五）</span></h2>
 		<table>
 			<tr><td>6:40</td><td><span data-num="2">2班</span></td></tr>
-			<tr><td>7:15</td><td><span data-num="3">直达</span></td></tr>
-			<tr><td>8:30</td><td><span data-num="3">直达</span></td></tr>
+			<tr><td>7:15</td><td><span data-num="2">2班</span></td></tr>
+			<tr><td>8:30</td><td><span data-num="1">1班</span></td></tr>
 			<tr><td>10:10</td><td><span data-num="2">2班</span></td></tr>
 			<tr><td>12:15</td><td><span data-num="3">3班</span></td></tr>
 			<tr><td>14:10</td><td><span data-num="2">2班</span></td></tr>
