@@ -27,7 +27,7 @@ if (!$detect->isMobile() || $detect->isTablet()) {
 <body>
 
 <div id="content">
-	<h1>交大校车<span class="version">v2.0</span></h1>
+	<h1>交大校车<span class="version">v2.1</span></h1>
 	<div id="by">by Jerry Zou</div>
 	<a class="internal-link big-button" href="/campus.php">校园巴士时刻表</a>
 	<a class="internal-link big-button" href="/remote.php">教工班车时刻表</a>
