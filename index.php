@@ -32,21 +32,20 @@ if (!$detect->isMobile() || $detect->isTablet()) {
 	<a class="internal-link big-button" href="/campus.php">校园巴士时刻表</a>
 	<a class="internal-link big-button" href="/remote.php">教工班车时刻表</a>
 	<a class="big-button" href="http://jerryzou.com/posts/sjtuBusFeedback/">意见反馈</a>
-	<script>
-		//prevent opening a new window in Safari
-		var a = document.getElementsByClassName("internal-link");
-		for(var i=0; i< a.length; i++) {
-			a[i].onclick = function() {
-				window.location = this.getAttribute("href");
-				return false;
-			}
-		}
-	</script>
 </div>
 <div id="tips">温馨提示：如果您使用iOS设备的Safari浏览器访问本页面，可以添加本页到桌面以获得原生APP的体验。</div>
 
-<!-- baidu site center -->
 <script>
+	//prevent opening a new window in Safari
+	var links = document.getElementsByClassName("internal-link");
+	[].forEach.call(links, function(link) {
+		link.addEventListener('click', function(event) {
+			location.href = this.getAttribute('href');
+			event.preventDefault();
+		});
+	});
+
+	//baidu site center
 	var _hmt = _hmt || [];
 	(function() {
 		var hm = document.createElement("script");

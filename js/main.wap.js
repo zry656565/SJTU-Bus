@@ -1,9 +1,9 @@
 (function($) {
     $(function () {
         //prevent opening a new window in Safari
-        $('.link').click(function() {
-            window.location = $(this).attr("href");
-            return false;
+        $('.link').click(function(event) {
+            location.href = $(this).attr("href");
+            event.preventDefault();
         });
 
         var map = new BMap.Map("container");

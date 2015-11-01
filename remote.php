@@ -25,14 +25,14 @@
 		</ul>
 
 		<div id="bookmark-container">
-			<a href="#xh-to-mh-workday">徐汇 &rarr; 闵行 | 工作日</a>
-			<a href="#mh-to-xh-workday">闵行 &rarr; 徐汇 | 工作日</a>
+			<a class="link" href="#xh-to-mh-workday">徐汇 &rarr; 闵行 | 工作日</a>
+			<a class="link" href="#mh-to-xh-workday">闵行 &rarr; 徐汇 | 工作日</a>
 			<br/>
-			<a href="#xh-to-mh-special">徐汇 &rarr; 闵行 | 特殊日</a>
-			<a href="#mh-to-xh-special">闵行 &rarr; 徐汇 | 特殊日</a>
+			<a class="link" href="#xh-to-mh-special">徐汇 &rarr; 闵行 | 特殊日</a>
+			<a class="link" href="#mh-to-xh-special">闵行 &rarr; 徐汇 | 特殊日</a>
 			<br/>
-			<a href="#qb-to-mh">七宝 &rarr; 闵行</a>
-			<a href="#mh-to-qb">闵行 &rarr; 七宝</a>
+			<a class="link" href="#qb-to-mh">七宝 &rarr; 闵行</a>
+			<a class="link" href="#mh-to-qb">闵行 &rarr; 七宝</a>
 		</div>
 
 		<h2 id="xh-to-mh-workday">徐汇 &rarr; 闵行<span>（工作日 - 周一至周五）</span></h2>
@@ -137,20 +137,23 @@
 <div id="footer-btn-group">
 	<a class="link" href="/">返回上页</a>
 	<a class="link" href="http://jerryzou.com/posts/sjtuBusFeedback/">意见反馈</a>
-	<script>
-		//prevent opening a new window in Safari
-		var a = document.getElementsByClassName("link");
-		for(var i=0; i< a.length; i++) {
-			a[i].onclick = function() {
-				window.location = this.getAttribute("href");
-				return false;
-			}
-		}
-	</script>
 </div>
 
-<!-- baidu site center -->
 <script>
+	//prevent opening a new window in Safari
+	var links = document.getElementsByClassName("link");
+	[].forEach.call(links, function(link) {
+		link.addEventListener('click', function(event) {
+			location.href = this.getAttribute('href');
+			event.preventDefault();
+		});
+	});
+
+	document.addEventListener('click', function(e) {
+		console.log(e.target);
+	});
+
+	//baidu site center
 	var _hmt = _hmt || [];
 	(function() {
 		var hm = document.createElement("script");
