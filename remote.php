@@ -149,8 +149,12 @@
 		});
 	});
 
-	document.addEventListener('click', function(e) {
-		console.log(e.target);
+	var container = document.getElementsByClassName('scroll-outer')[0];
+	container.addEventListener('scroll', function(event){
+		// Hack for Safari (-webkit-overflow-scrolling)
+		// [Bug?] Sometimes, Hash link will make the screen white.
+		window.scroll(0, 1);
+		window.scroll(0, -1);
 	});
 
 	//baidu site center
