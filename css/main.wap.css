@@ -42,6 +42,7 @@ body {
   max-height: 200px;
   height: 80%;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 #container .tip-scroll .tip-content {
   width: 100%;
