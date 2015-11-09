@@ -25,6 +25,8 @@ fis release --watch #watch可以保证你的修改即时刷新
 ```
 #编译线上版本，此处的 `./build` 为指定的输出目录
 fis release --optimize --md5 --pack --dest ./build
+#or
+fis release -omp -d ./build
 
 #使用git-for-SAE脚本将代码上传到SAE
 cd build
