@@ -94,7 +94,7 @@
 		<table>
 			<tr><td>7:30</td><td>直达</td></tr>
 			<tr><td>12:15</td><td>直达</td></tr>
-			<tr><td>16:30</td><td>徐汇校区（直达，途径罗阳、上中、天钥、交大新村）、田林、古美； 教工亦可在东区行政B楼官场乘车直达徐汇校区</td></tr>
+			<tr><td>16:30</td><td>徐汇校区（直达，途径罗阳、上中、天钥、交大新村）、田林、古美； 教工亦可在东区行政B楼广场乘车直达徐汇校区</td></tr>
 			<tr><td>17:30</td><td>直达</td></tr>
 			<tr><td>20:00</td><td>直达</td></tr>
 		</table>
@@ -136,7 +136,7 @@
 
 <div id="footer-btn-group">
 	<a class="link" href="/">返回上页</a>
-	<a class="link" href="http://jerryzou.com/posts/sjtuBusFeedback/">意见反馈</a>
+	<a href="http://jerryzou.com/posts/sjtuBusFeedback/">意见反馈</a>
 </div>
 
 <script>
