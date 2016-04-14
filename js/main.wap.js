@@ -9,7 +9,7 @@
         var map = new BMap.Map("container");
         map.centerAndZoom(new BMap.Point(121.443235,31.031303), 16); //将中心位置设置到上海交大
 
-        $.getJSON( "data.json?v=1.2.0", function( data ) {
+        $.getJSON( "data.json?v=20160414", function( data ) {
             var timeList = data.startTime,
                 dongchuanTime = data.dongchuanTime,
                 stopList = data.stopList,
@@ -38,7 +38,7 @@
                             sContent += SBus.pushDirectToContent(direct, timeList, stopName);
                         });
                     }
-                    sContent += "</div></div>" + "<p class='footer'>本时刻表的最后更新时间为：2016年2月27日</p>";
+                    sContent += "</div></div>" + "<p class='footer'>本时刻表的最后更新时间为：2016年4月14日</p>";
                     var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象 
                     marker.addEventListener("click", function(){          
                         map.openInfoWindow(infoWindow,point); //开启信息窗口

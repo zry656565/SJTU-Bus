@@ -8,7 +8,7 @@
             console.log(e.point.lng + "," + e.point.lat);
         });*/
         
-        $.getJSON( "data.json?v=1.2.0", function( data ) {
+        $.getJSON( "data.json?v=20140414", function( data ) {
             var timeList = data.startTime,
                 dongchuanTime = data.dongchuanTime,
                 stopList = data.stopList,
@@ -34,7 +34,7 @@
                             sContent += SBus.pushDirectToContent(direct, timeList, stopName);
                         });
                     }
-                    sContent += "<p class='footer'>本时刻表的最后更新时间为：2016年2月27日</p>"  + "</div>";
+                    sContent += "<p class='footer'>本时刻表的最后更新时间为：2016年4月14日</p>"  + "</div>";
                     var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象 
                     marker.addEventListener("click", function(){          
                         map.openInfoWindow(infoWindow, point); //开启信息窗口

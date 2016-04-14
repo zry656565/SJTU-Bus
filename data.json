@@ -43,7 +43,7 @@
         },
         "校医院": {
             "direct1_diff": 0,
-            "direct2_diff": 20
+            "direct2_diff": 17
         },
         "东上院": {
             "direct1_diff": 2,
@@ -67,7 +67,7 @@
         },
         "凯旋门": {
             "direct1_diff": 1,
-            "direct2_diff": -2
+            "direct2_diff": -1
         },
         "机动学院": {
             "direct1_diff": 1,
@@ -86,8 +86,8 @@
             "direct2_diff": -1
         },
         "学生服务中心": {
-            "direct1_diff": 2,
-            "direct2_diff": -3
+            "direct1_diff": 1,
+            "direct2_diff": -1
         },
         "西区学生公寓": {
             "direct1_diff": 1,
@@ -98,12 +98,12 @@
             "direct2_diff": -1
          },
         "华联生活中心": {
-            "direct1_diff": 2,
-            "direct2_diff": -2
+            "direct1_diff": 1,
+            "direct2_diff": -1
         },
         "包玉刚图书馆": {
             "direct1_diff": 1,
-            "direct2_diff": 0
+            "direct2_diff": -1
         },
         "材料学院": {
             "direct1_diff": 1,
