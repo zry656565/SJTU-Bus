@@ -6,7 +6,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="images/bus_icon.png">
 	<meta name="keywords" content="上海交大,校园巴士,校车,教工班车,时刻表,上海交通大学,JerryZou,邹润阳">
 	<meta name="description" content="上海交通大学校园巴士时刻表 by Jerry Zou，你可以在这里查看详细的校园巴士到站时间。">
-	<link href="css/main.web.css" rel="stylesheet"/>
+	<link href="styles/main.web.less" rel="stylesheet"/>
 </head>
 
 <body>
