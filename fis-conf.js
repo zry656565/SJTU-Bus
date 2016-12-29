@@ -5,7 +5,7 @@ fis.set('project.ignore', [
   '.svn/**',
   '.idea/**',
   '.gitignore',
-  'README.md',
+  '**.md',
   'LICENSE',
   'fis-conf.js',
   'package.json'
