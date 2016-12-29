@@ -1,0 +1,18 @@
+{
+  "name": "sjtu-bus",
+  "version": "2.1.1",
+  "scripts": {
+    "clear": "rm -rf build",
+    "build": "fis3 release -d build",
+    "release": "fis3 release prod -d build",
+    "deploy-prod": "SAE_VERSION=2 npm run _deploy",
+    "deploy-staging": "SAE_VERSION=3 npm run _deploy",
+    "_deploy": "npm run clear && npm run release && cd build && sae-push.sh sjtubus $SAE_VERSION"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zry656565/SJTU-Bus.git"
+  },
+  "author": "jerryzou",
+  "license": "MIT"
+}

@@ -1,3 +1,16 @@
+fis.set('project.ignore', [
+  'build/**',
+  'logs/**',
+  '.git/**',
+  '.svn/**',
+  '.idea/**',
+  '.gitignore',
+  'README.md',
+  'LICENSE',
+  'fis-conf.js',
+  'package.json'
+]);
+
 fis.match('::package', {
   postpackager: fis.plugin('loader', {
     allInOne: true
