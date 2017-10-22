@@ -4,6 +4,7 @@ fis.set('project.ignore', [
   '.git/**',
   '.svn/**',
   '.idea/**',
+  'node_modules/**',
   '.gitignore',
   '**.md',
   'LICENSE',
