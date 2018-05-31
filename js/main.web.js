@@ -50,7 +50,30 @@
             }
             var polyline = new BMap.Polyline(pointArr, {strokeColor:"blue", strokeWeight:5, strokeOpacity:0.5});
             map.addOverlay(polyline);
+
         }).fail(function(){});
+
+        $.getJSON( "http://boar.moe:8084", function( data ) {
+
+            for (var i = 0; i < data.length; i++) {
+                var myIcon = new BMap.Icon('realtime_bus.png', new BMap.Size(36, 36));//这里先不用第三个参数IconOptions
+                var point = new BMap.Point(data[i].longitude, data[i].dimension);
+                var mk = new BMap.Marker(point, {icon:myIcon});//创建标注图标
+
+                var sContent = "<h4 class=\"businfo-title\">校园巴士 #" + data[i].busno + "</h4>";
+                sContent += "<p class='businfo'>车牌号: <span style='font-weight: 400'>" + data[i].platenumber + "</span></p>";
+                sContent += "<p class='businfo'>车速: <span style='font-weight: 400'>" + data[i].speed + " km/s</span></p>";
+
+                var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+                mk.addEventListener("click", function(){
+                    map.openInfoWindow(infoWindow, point); //开启信息窗口
+                });
+
+                map.addOverlay(mk);//将标注添加到地图中
+            }
+
+        }).fail(function(){});
+
     });
 })(jQuery);
 
