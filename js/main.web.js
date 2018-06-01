@@ -75,7 +75,7 @@
 
                         var sContent = "<h4 class=\"businfo-title\">校园巴士 #" + data[i].busno + "</h4>";
                         sContent += "<p class='businfo'>车牌号: <span style='font-weight: 400'>" + data[i].platenumber + "</span></p>";
-                        sContent += "<p class='businfo'>车速: <span style='font-weight: 400'>" + data[i].speed + " km/s</span></p>";
+                        sContent += "<p class='businfo'>车速: <span style='font-weight: 400'>" + data[i].speed + " km/h</span></p>";
 
                         var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
                         mk.addEventListener("click", function(){
