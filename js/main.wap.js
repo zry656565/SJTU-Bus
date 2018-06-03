@@ -113,8 +113,6 @@
             });
         });
 
-        var bus_count = 0;
-
         var realtimeBus = function () {
             var allOverlays = map.getOverlays();
             for(var j = 0; j<allOverlays.length; j++) {
@@ -124,7 +122,6 @@
             }
 
             $.getJSON( "https://sjtubus.boar.moe/", function( data ) {
-                bus_count = data.length;
                 for (var i = 0; i < data.length; i++) {
                     (function (i) {
                         var myIcon = new BMap.Icon('map_icon_bus.png', new BMap.Size(48, 48));//这里先不用第三个参数IconOptions

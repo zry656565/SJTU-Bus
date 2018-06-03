@@ -12,3 +12,5 @@ node_modules
 
 #git-for-sae
 .svn
+
+.DS_Store
