@@ -43,8 +43,9 @@ npm run deploy-staging  # 测试环境
 
 ## 主要贡献者
 
-- [zry656565](https://github.com/zry656565)
-- [gyz0072004](https://github.com/gyz0072004)
-- [zlqy386](https://github.com/zlqy386)
-- [MyComputableRomance](https://github.com/MyComputableRomance)
-- [ysyjerry1992](https://github.com/ysyjerry1992)
+- [@zry656565](https://github.com/zry656565)
+- [@gyz0072004](https://github.com/gyz0072004)
+- [@zlqy386](https://github.com/zlqy386)
+- [@MyComputableRomance](https://github.com/MyComputableRomance)
+- [@ysyjerry1992](https://github.com/ysyjerry1992)
+- [@hebingchang](https://github.com/hebingchang)
