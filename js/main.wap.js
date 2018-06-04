@@ -112,5 +112,44 @@
                 }, {enableHighAccuracy: true})
             });
         });
+
+        var realtimeBus = function () {
+            var allOverlays = map.getOverlays();
+            for(var j = 0; j<allOverlays.length; j++) {
+                if (allOverlays[j].tag === "bus_realtime") {
+                    map.removeOverlay(allOverlays[j]);
+                }
+            }
+
+            // api repo: https://github.com/hebingchang/sjtubus-realtime-api
+            $.getJSON( "https://sjtubus.boar.moe/", function( data ) {
+                for (var i = 0; i < data.length; i++) {
+                    (function (i) {
+                        var myIcon = new BMap.Icon('map_icon_bus.png', new BMap.Size(48, 48));//这里先不用第三个参数IconOptions
+                        var point = new BMap.Point(data[i].longitude, data[i].dimension);
+                        var mk = new BMap.Marker(point, {icon:myIcon});//创建标注图标
+                        mk.setRotation(data[i].direction);
+                        mk.tag = "bus_realtime";
+
+                        var sContent = "<h4 class=\"businfo-title\">校园巴士 #" + data[i].busno + "</h4>";
+                        sContent += "<p class='businfo'>车牌号: <span style='font-weight: 400'>" + data[i].platenumber + "</span></p>";
+                        sContent += "<p class='businfo'>车速: <span style='font-weight: 400'>" + data[i].speed + " km/h</span></p>";
+
+                        var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+                        mk.addEventListener("click", function(){
+                            map.openInfoWindow(infoWindow, point); //开启信息窗口
+                        });
+
+                        map.addOverlay(mk);//将标注添加到地图中
+                    })(i);
+                }
+
+            }).fail(function(){})
+        };
+
+        setInterval(function() {
+            realtimeBus();
+        }, 5000);
+
     });
 })(Zepto);
