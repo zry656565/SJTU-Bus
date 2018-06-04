@@ -143,8 +143,7 @@
                         map.addOverlay(mk);//将标注添加到地图中
                     })(i);
                 }
-
-            }).fail(function(){})
+            })
         };
 
         setInterval(function() {
