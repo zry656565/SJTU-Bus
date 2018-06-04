@@ -51,7 +51,7 @@
             var polyline = new BMap.Polyline(pointArr, {strokeColor:"blue", strokeWeight:5, strokeOpacity:0.5});
             map.addOverlay(polyline);
 
-        }).fail(function(){});
+        }).error(function(){});
 
         var realtimeBus = function () {
             var allOverlays = map.getOverlays();
@@ -61,6 +61,7 @@
                 }
             }
 
+            // api repo: https://github.com/hebingchang/sjtubus-realtime-api
             $.getJSON( "https://sjtubus.boar.moe/", function( data ) {
                 for (var i = 0; i < data.length; i++) {
                     (function (i) {

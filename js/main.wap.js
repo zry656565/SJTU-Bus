@@ -121,6 +121,7 @@
                 }
             }
 
+            // api repo: https://github.com/hebingchang/sjtubus-realtime-api
             $.getJSON( "https://sjtubus.boar.moe/", function( data ) {
                 for (var i = 0; i < data.length; i++) {
                     (function (i) {
