@@ -1,0 +1,53 @@
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+
+common: &common
+  working_directory: ~/SJTU-Bus
+  docker:
+    - image: circleci/node:8
+
+version: 2
+jobs:
+  build:
+    <<: *common
+    steps:
+      # special step to check out source code to working directory
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: npm install
+
+      - save_cache:
+          paths:
+            - ./node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+  deploy:
+    <<: *common
+    steps:
+      - attach_workspace:
+          at: ~/SJTU-Bus
+      - run: |
+          mkdir .svn
+          cd .svn
+	        svn checkout https://svn.sinaapp.com/sjtubus
+    
+workflows:
+  version: 2
+  build_test_and_deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            tags:
+              only: /v\d+\.\d+\.\d+/
+            branches:
+              only: ci
+
