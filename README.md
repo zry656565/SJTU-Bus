@@ -1,6 +1,8 @@
 SJTU校园巴士时刻表
 ========
 
+[![CircleCI](https://circleci.com/gh/zry656565/SJTU-Bus/tree/master.svg?style=svg)](https://circleci.com/gh/zry656565/SJTU-Bus/tree/master)
+
 本项目是一个web应用，用于便捷地查看上海交通大学校园巴士的时刻表。本项目遵循MIT开源协议。
 
 - [更新记录](./changelog.md)

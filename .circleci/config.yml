@@ -1,0 +1,89 @@
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+
+common: &common
+  working_directory: ~/SJTU-Bus
+  docker:
+    - image: circleci/node:8
+
+deploy_common: &deploy_common
+  steps:
+    - checkout
+    - attach_workspace:
+        at: ~/SJTU-Bus
+    - run: |
+        sudo npm install -g fis3 fis-parser-less fis3-postpackager-loader
+        npm run clear
+        npm run release
+    - run: |
+        mkdir .svn
+        cd .svn
+        svn checkout https://svn.sinaapp.com/sjtubus --username "$SAE_USERNAME" --password "$SAE_PASSWORD"  --no-auth-cache
+        cd "sjtubus/$SVN_VERSION"
+        mv config.yaml ../config.yaml
+        rm -rf *
+        mv ../config.yaml config.yaml
+        svn st | awk '{print $2}' | xargs svn delete
+        svn commit -m "clean all" --username "$SAE_USERNAME" --password "$SAE_PASSWORD"  --no-auth-cache
+    - run: |
+        SVN_DIR_NAME="sjtubus/$SVN_VERSION"
+        cd build
+        cp -rf * "../.svn/$SVN_DIR_NAME"
+        cd "../.svn/$SVN_DIR_NAME"
+        svn st | awk '{if ( $1 == "?") { print $2 }}' | xargs svn add
+        svn commit -m "modify" --username "$SAE_USERNAME" --password "$SAE_PASSWORD"  --no-auth-cache
+
+version: 2
+jobs:
+  build:
+    <<: *common
+    steps:
+      # special step to check out source code to working directory
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: |
+          npm install
+          sudo npm install -g fis3 fis-parser-less fis3-postpackager-loader
+
+      - save_cache:
+          paths:
+            - ./node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      
+      - run: npm run build
+
+  deploy_staging:
+    environment:
+      SVN_VERSION: 3
+    <<: *common
+    <<: *deploy_common
+  
+  deploy:
+    environment:
+      SVN_VERSION: 2
+    <<: *common
+    <<: *deploy_common
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy_staging:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+      - deploy:
+          requires:
+            - build
+          filters:
+            tags:
+              only: /v\d+\.\d+\.\d+/
