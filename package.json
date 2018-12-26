@@ -4,6 +4,7 @@
   "scripts": {
     "clear": "rm -rf build",
     "build": "fis3 release -d build",
+    "lint": "eslint js/*.js --fix",
     "release": "fis3 release prod -d build",
     "deploy-prod": "SAE_VERSION=2 npm run _deploy",
     "deploy-staging": "SAE_VERSION=3 npm run _deploy",
@@ -16,6 +17,6 @@
   "author": "jerryzou",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^4.9.0"
+    "eslint": "^5.11.0"
   }
 }
