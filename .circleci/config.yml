@@ -86,6 +86,6 @@ workflows:
             - build
           filters:
             tags:
-              only: /v\d+\.\d+\.\d+/
+              only: /^v.*/
             branches:
               ignore: /.*/
