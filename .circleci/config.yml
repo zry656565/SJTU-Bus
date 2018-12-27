@@ -34,7 +34,7 @@ deploy_common: &deploy_common
 
 version: 2
 jobs:
-  build:
+  prepare:
     <<: *common
     steps:
       # special step to check out source code to working directory
@@ -47,16 +47,33 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: |
-          npm install
-          sudo npm install -g fis3 fis-parser-less fis3-postpackager-loader
+      - run: npm install
 
       - save_cache:
           paths:
             - ./node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      
-      - run: npm run build
+
+  build:
+    <<: *common
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+
+      - run: |
+          sudo npm install -g fis3 fis-parser-less fis3-postpackager-loader
+          npm run build
+  
+  lint:
+    <<: *common
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+      - run: npm run lint
 
   deploy_staging:
     environment:
@@ -74,19 +91,30 @@ workflows:
   version: 2
   build_and_deploy:
     jobs:
+      - prepare:
+          filters:
+            tags:
+              only: /.*/
+      - lint:
+          requires:
+            - prepare
       - build:
-          filters:  # required since `deploy` has tag filters AND requires `build`
+          requires:
+            - prepare
+          filters:
             tags:
               only: /.*/
       - deploy_staging:
           requires:
             - build
+            - lint
           filters:
             branches:
               only: master
       - deploy:
           requires:
             - build
+            - lint
           filters:
             tags:
               only: /^v.*/
