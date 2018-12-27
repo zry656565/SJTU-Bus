@@ -1,8 +1,7 @@
 window.SBus = {};
 
 (function (SBus) {
-
-  function shouldHighlight(h, m) {
+  function shouldHighlight (h, m) {
     var now = new Date()
     var shownTime = new Date()
     shownTime.setHours(h)
@@ -11,8 +10,8 @@ window.SBus = {};
     deadline.setHours(20)
     deadline.setMinutes(30)
 
-    return now >= deadline
-      || now < shownTime
+    return now >= deadline ||
+      now < shownTime
   }
 
   function printTime (h, m, color) {
@@ -30,24 +29,25 @@ window.SBus = {};
     var isHighlight = shouldHighlight(h, m)
     var className = ''
     switch (color) {
-    case 'red':
-      className = isHighlight ? 'red' : 'disabled-red'
-      break
-    case 'blue':
-      className = isHighlight ? 'blue' : 'disabled-blue'
-      break
-    case 'normal':
-    default:
-      className = isHighlight ? '' : 'silver'
-      break
+      case 'red':
+        className = isHighlight ? 'red' : 'disabled-red'
+        break
+      case 'blue':
+        className = isHighlight ? 'blue' : 'disabled-blue'
+        break
+      case 'normal':
+      default:
+        className = isHighlight ? '' : 'silver'
+        break
     }
     return '<span class="' + className + '">' + result + '</span>'
   }
 
   function calcTime (timeArr, diff) {
     for (var i = 0; i < timeArr.length; i += 2) {
-      var hour = timeArr[i],
-        minute = timeArr[i + 1]
+      var hour = timeArr[i]
+
+      var minute = timeArr[i + 1]
       minute += diff
       if (minute >= 60) {
         minute -= 60
@@ -62,13 +62,12 @@ window.SBus = {};
   }
 
   SBus.initContent = function (stopName, special) {
-    return '<div class="tip-content">'
-      + '<h4 class="title">' + stopName + '</h4>'
-      + '<p class="attention">1. 蓝色班次：终点站东川路地铁站</p>'
-      + '<p class="attention">2. 周六日及法定节假日停运</p>'
-      + (special ? '<p class="attention">3. 红色标注班次终点站［可能］为菁菁堂（根据本站作者的猜测＝。＝）</p>' : '')
+    return '<div class="tip-content">' +
+      '<h4 class="title">' + stopName + '</h4>' +
+      '<p class="attention">1. 蓝色班次：终点站东川路地铁站</p>' +
+      '<p class="attention">2. 周六日及法定节假日停运</p>' +
+      (special ? '<p class="attention">3. 红色标注班次终点站［可能］为菁菁堂（根据本站作者的猜测＝。＝）</p>' : '')
   }
-  
 
   SBus.initContentMobile = function (stopName) {
     return '<h4 class="title">' + stopName + '</h4>' +
@@ -88,21 +87,21 @@ window.SBus = {};
   SBus.pushDirectToContent = function (directId, stopTime) {
     var directName
     switch (directId) {
-    case 'direct1':
-      directName = '逆时针'
-      break
-    case 'direct2':
-      directName = '顺时针'
-      break
-    case 'festival_direct1':
-      directName = '寒暑假－逆时针'
-      break
-    case 'festival_direct2':
-      directName = '寒暑假－顺时针'
-      break
-    default:
-      directName = ''
-      break
+      case 'direct1':
+        directName = '逆时针'
+        break
+      case 'direct2':
+        directName = '顺时针'
+        break
+      case 'festival_direct1':
+        directName = '寒暑假－逆时针'
+        break
+      case 'festival_direct2':
+        directName = '寒暑假－顺时针'
+        break
+      default:
+        directName = ''
+        break
     }
     if (!directName) {
       return ''
@@ -111,15 +110,15 @@ window.SBus = {};
     var blueNum = stopTime[directId + '_blue'] || 0
     var redNum = stopTime[directId + '_red'] || 0
     // if it's Sunday or Saturday
-    /*if (day == 0 || day == 6) {
+    /* if (day == 0 || day == 6) {
         for(; j<timeArr.length; j += 2) {
             sContent += printTime(timeArr[j], timeArr[j + 1]);
         }
         sContent += "</span>" + "</p>";
         return sContent;
-    }*/
+    } */
 
-    //If current time < 20:30, show all times with regular color.
+    // If current time < 20:30, show all times with regular color.
     var timeStr = []
     for (var j = 0; j < timeArr.length; j += 2) {
       var color
@@ -132,10 +131,10 @@ window.SBus = {};
     }
 
     return (
-      '<h5 class="direct">' + directName + '</h5>'
-      + '<p class="timetable">'
-      + timeStr.join('')
-      + '</p>'
+      '<h5 class="direct">' + directName + '</h5>' +
+      '<p class="timetable">' +
+      timeStr.join('') +
+      '</p>'
     )
   }
 }(window.SBus))
