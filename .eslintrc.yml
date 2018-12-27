@@ -14,3 +14,11 @@ rules:
   semi:
     - error
     - never
+globals:
+  BMap: true
+  BMAP_STATUS_SUCCESS: true
+  SBus: true
+  Zepto: true
+  jQuery: true
+  Spinner: true
+  $: true
