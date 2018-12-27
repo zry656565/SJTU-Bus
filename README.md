@@ -23,7 +23,7 @@ SJTU校园巴士时刻表
 npm install -g fis3 fis-parser-less fis3-postpackager-loader
 ```
 
-### 编译 & 部署线上版本
+### 编译代码
 
 编译的默认输出目录都是 `./build`。
 
@@ -34,14 +34,12 @@ npm run release
 npm run build
 ```
 
-本项目目前部署于 SAE，而早期的 SAE 只能使用 SVN 作为版本控制工具。因此我写了个[脚本](https://github.com/zry656565/git-for-SAE)来将本项目的代码部署在 SAE 上：
+### 部署
 
-```bash
-# 安装 git-for-SAE 脚本成功后，
-# 通过如下命令可以向 SAE 进行部署
-npm run deploy-prod     # 线上环境
-npm run deploy-staging  # 测试环境
-```
+本项目使用 [circleci](https://circleci.com/) 进行部署。
+
+- 每当 master 分支更新时，circleci 会在编译成功后，自动部署到 http://3.sjtubus.sinaapp.com
+- 每当新增加一个 tag（如 v2.4.0）时，circleci 会在编译成功后，自动部署到 http://sjtubus.sinaapp.com
 
 ## 主要贡献者
 
