@@ -21,7 +21,8 @@
 		<h1>教工班车时刻表</h1>
 		<ul class="tips">
             <li class="notice">2015年11月2日起实施新的时刻表</li>
-            <li>本时刻表最后更新时间：2015年11月2日</li>
+            <li>本时刻表最后更新时间：2019年04月19日</li>
+						<li><a href="http://houqin.sjtu.edu.cn/show.asp?id=1939">天钥、上中支线发车时间调整</a></li>
 		</ul>
 
 		<div id="bookmark-container">
@@ -37,7 +38,7 @@
 
 		<h2 id="xh-to-mh-workday">徐汇 &rarr; 闵行<span>（工作日 - 周一至周五）</span></h2>
 		<table>
-			<tr><td>6:45</td><td>天钥桥路始发，途经上中、罗阳至闵行</td></tr>
+			<tr><td>6:40</td><td>天钥桥路始发，途经上中、罗阳至闵行</td></tr>
 			<tr><td>6:45</td><td>田林始发，途经古美至闵行</td></tr>
 			<tr><td>7:00</td><td>徐汇校区、交大新村分别始发</td></tr>
 			<tr><td>7:30</td><td>徐汇校区、交大新村、田林、古美（途径罗阳）分别始发</td></tr>
