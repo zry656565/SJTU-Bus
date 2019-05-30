@@ -1,6 +1,6 @@
 {
   "name": "sjtu-bus",
-  "version": "2.3.1",
+  "version": "2.4.0",
   "scripts": {
     "clear": "rm -rf build",
     "build": "fis3 release -d build",
