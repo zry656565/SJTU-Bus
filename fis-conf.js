@@ -20,8 +20,8 @@ fis.match('::package', {
 
 // 将图片的请求重定向到 upyun 提供的 CDN 上
 fis.match('images/(**.{png,jpg,gif})', {
-  release: '/$1',
-  domain: 'http://jerry-static.b0.upaiyun.com'
+  release: '/resources/sjtubus/$1',
+  domain: 'https://jerryz.sgp1.cdn.digitaloceanspaces.com'
 });
 
 fis.match('*.less', {
