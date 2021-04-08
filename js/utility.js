@@ -139,7 +139,7 @@ window.SBus = {};
   }
 
   SBus.gcj02ToBd09 = function (location) {
-    const xPi = 3.14159265358979324 * 3000.0 / 180.0
+    var xPi = 3.14159265358979324 * 3000.0 / 180.0
     var x = location.longitude
     var y = location.latitude
     var z = Math.sqrt(x * x + y * y) + 0.00002 * Math.sin(y * xPi)

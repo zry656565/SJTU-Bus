@@ -62,8 +62,8 @@
       }
 
       // bus.sjtu.edu.cn is maintained by SJTU NIC
-      $.getJSON('https://bus.sjtu.edu.cn/api/v1/shuttle/918484/0/monitor', (res) => {
-        res.data.map((item) => {
+      $.getJSON('https://bus.sjtu.edu.cn/api/v1/shuttle/918484/0/monitor', function (res) {
+        res.data.map(function (item) {
           var myIcon = new BMap.Icon('/resources/sjtubus/map_icon_bus.png', new BMap.Size(48, 48))
           var location = SBus.gcj02ToBd09(item.location)
           var point = new BMap.Point(location.longitude, location.latitude)
