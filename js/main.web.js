@@ -61,29 +61,27 @@
         }
       }
 
-      // api repo: https://github.com/hebingchang/sjtubus-realtime-api
-      $.getJSON('https://sjtubus.boar.moe/', function (data) {
-        for (var i = 0; i < data.length; i++) {
-          (function (i) {
-            var myIcon = new BMap.Icon('map_icon_bus.png', new BMap.Size(48, 48))// 这里先不用第三个参数IconOptions
-            var point = new BMap.Point(data[i].longitude, data[i].dimension)
-            var mk = new BMap.Marker(point, { icon: myIcon })// 创建标注图标
-            mk.setRotation(data[i].direction)
-            mk.tag = 'bus_realtime'
+      // bus.sjtu.edu.cn is maintained by SJTU NIC
+      $.getJSON('https://bus.sjtu.edu.cn/api/v1/shuttle/918484/0/monitor', (res) => {
+        res.data.map((item) => {
+          var myIcon = new BMap.Icon('/resources/sjtubus/map_icon_bus.png', new BMap.Size(48, 48))
+          var location = SBus.gcj02ToBd09(item.location)
+          var point = new BMap.Point(location.longitude, location.latitude)
+          var mk = new BMap.Marker(point, { icon: myIcon }) // 创建标注图标
+          mk.setRotation(item.angle)
+          mk.tag = 'bus_realtime'
 
-            var sContent = '<h4 class="businfo-title">校园巴士 #' + data[i].busno + '</h4>'
-            sContent += '<p class=\'businfo\'>车牌号: <span style=\'font-weight: 400\'>' + data[i].platenumber + '</span></p>'
-            sContent += '<p class=\'businfo\'>车速: <span style=\'font-weight: 400\'>' + data[i].speed + ' km/h</span></p>'
+          var sContent = '<h4 class="businfo-title">校园巴士 #' + item.vehicle_code + '</h4>'
+          sContent += '<p class=\'businfo\'>车速: <span style=\'font-weight: 400\'>' + item.speed + ' km/h</span></p>'
 
-            var infoWindow = new BMap.InfoWindow(sContent) // 创建信息窗口对象
-            mk.addEventListener('click', function () {
-              map.openInfoWindow(infoWindow, point) // 开启信息窗口
-            })
+          var infoWindow = new BMap.InfoWindow(sContent) // 创建信息窗口对象
+          mk.addEventListener('click', function () {
+            map.openInfoWindow(infoWindow, point) // 开启信息窗口
+          })
 
-            map.addOverlay(mk)// 将标注添加到地图中
-          })(i)
-        }
-      }).fail(function () {})
+          map.addOverlay(mk) // 将标注添加到地图中
+        })
+      })
     }
 
     setInterval(function () {
