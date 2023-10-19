@@ -1,5 +1,12 @@
-SJTU校园巴士时刻表
+SJTU校园巴士时刻表 [deprecated]
 ========
+
+
+
+
+**项目已终止维护**，请访问 https://bus.sjtu.edu.cn 查看最新的校园巴士情况。
+
+---
 
 [![CircleCI](https://circleci.com/gh/zry656565/SJTU-Bus/tree/master.svg?style=svg)](https://circleci.com/gh/zry656565/SJTU-Bus/tree/master)
 
